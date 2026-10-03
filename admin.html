@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Joy Funds | Admin Portal</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .admin-wrap {
+      padding: 28px 0 60px;
+    }
+
+    .admin-heading {
+      margin-bottom: 26px;
+    }
+
+    .admin-heading h1 {
+      margin: 5px 0;
+      font-size: clamp(2rem, 4vw, 2.6rem);
+      letter-spacing: -0.05em;
+    }
+
+    .admin-heading p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .admin-toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .admin-toolbar input {
+      flex: 1 1 240px;
+      padding: 12px 14px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      font: inherit;
+    }
+
+    .admin-toolbar .btn {
+      padding: 12px 18px;
+    }
+
+    .user-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      box-shadow: var(--shadow);
+      padding: 20px 22px;
+      margin-bottom: 18px;
+    }
+
+    .user-card-head {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: flex-start;
+      margin-bottom: 14px;
+    }
+
+    .user-card-head h2 {
+      margin: 0 0 4px;
+      font-size: 1.25rem;
+    }
+
+    .user-card-head p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .user-card-balance {
+      text-align: right;
+    }
+
+    .user-card-balance span {
+      display: block;
+      font-size: 0.72rem;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .user-card-balance strong {
+      font-size: 1.6rem;
+      letter-spacing: -0.04em;
+      color: var(--primary-strong);
+    }
+
+    .user-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 16px;
+    }
+
+    .user-actions .btn {
+      padding: 9px 14px;
+      border-radius: 10px;
+      font-size: 0.85rem;
+    }
+
+    .btn-small {
+      padding: 8px 12px;
+      border-radius: 9px;
+      font-size: 0.8rem;
+      border: 1px solid var(--border);
+      background: #fff;
+      color: var(--text);
+      cursor: pointer;
+      font-weight: 700;
+    }
+
+    .btn-small:hover {
+      background: #f8fafc;
+    }
+
+    .btn-accept {
+      background: #16a34a;
+      color: #fff;
+      border-color: #16a34a;
+    }
+
+    .btn-accept:hover {
+      background: #15803d;
+    }
+
+    .btn-decline {
+      background: #dc2626;
+      color: #fff;
+      border-color: #dc2626;
+    }
+
+    .btn-decline:hover {
+      background: #b91c1c;
+    }
+
+    .activity-list {
+      border-top: 1px solid var(--border);
+      padding-top: 14px;
+    }
+
+    .activity-row {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+      padding: 12px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .activity-row:last-child {
+      border-bottom: 0;
+    }
+
+    .activity-row-info strong {
+      display: block;
+      font-size: 0.95rem;
+    }
+
+    .activity-row-info {
+      min-width: 0;
+      overflow-wrap: anywhere;
+    }
+
+    .activity-row-info small {
+      display: block;
+      color: var(--muted);
+      font-size: 0.8rem;
+      overflow-wrap: anywhere;
+    }
+
+    .activity-row-amount {
+      font-weight: 800;
+      color: var(--primary-strong);
+    }
+
+    .activity-row-actions {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .status-badge {
+      display: inline-block;
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+    }
+
+    .status-pending {
+      background: #fef3c7;
+      color: #92400e;
+    }
+
+    .status-funded {
+      background: #dbeafe;
+      color: var(--primary-strong);
+    }
+
+    .status-doubled {
+      background: #dcfce7;
+      color: #166534;
+    }
+
+    .status-declined {
+      background: #fee2e2;
+      color: #991b1b;
+    }
+
+    .status-paid {
+      background: #dcfce7;
+      color: #166534;
+    }
+
+    .status-rejected {
+      background: #fee2e2;
+      color: #991b1b;
+    }
+
+    /* Modal */
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(15, 23, 42, 0.55);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      z-index: 100;
+    }
+
+    .modal-backdrop.open {
+      display: flex;
+    }
+
+    .modal {
+      background: #fff;
+      border-radius: 20px;
+      padding: 26px 24px;
+      width: min(440px, 100%);
+      box-shadow: 0 30px 60px rgba(15, 23, 42, 0.25);
+    }
+
+    .modal h2 {
+      margin: 0 0 16px;
+      font-size: 1.3rem;
+    }
+
+    .modal .field-group {
+      margin-bottom: 14px;
+    }
+
+    .modal .field-group label {
+      display: block;
+      font-weight: 700;
+      font-size: 0.9rem;
+      margin-bottom: 6px;
+    }
+
+    .modal .field-group input {
+      width: 100%;
+      padding: 11px 13px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      font: inherit;
+    }
+
+    .modal-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: flex-end;
+      margin-top: 18px;
+    }
+
+    .modal-actions .btn {
+      padding: 10px 16px;
+      border-radius: 10px;
+    }
+
+    @media (max-width: 420px) {
+      .modal-actions .btn {
+        flex: 1 1 100%;
+      }
+
+      .user-card {
+        padding: 16px 14px;
+      }
+
+      .activity-row-actions .btn-small,
+      .user-actions .btn-small {
+        min-height: 44px;
+      }
+    }
+
+    .admin-flash {
+      display: none;
+      margin: 0 0 18px;
+      padding: 12px 14px;
+      border-radius: 10px;
+      font-weight: 700;
+    }
+
+    .admin-flash.show {
+      display: block;
+    }
+
+    .admin-flash.success {
+      background: #ecfdf5;
+      color: #166534;
+      border: 1px solid #a7f3d0;
+    }
+
+    .admin-flash.error {
+      background: #fff7ed;
+      color: #9a5b00;
+      border: 1px solid #fed7aa;
+    }
+
+    .private-message-panel {
+      margin-top: 16px;
+      padding: 14px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      background: #f8fafc;
+    }
+
+    .private-message-panel h3 {
+      margin: 0 0 10px;
+      font-size: 1rem;
+    }
+
+    .private-message-panel textarea {
+      display: block;
+      width: 100%;
+      min-height: 80px;
+      padding: 10px 12px;
+      border: 1px solid var(--border);
+      border-radius: 9px;
+      font: inherit;
+      resize: vertical;
+    }
+
+    .private-message-panel .btn-small {
+      margin-top: 8px;
+    }
+
+    .private-message-history {
+      margin-top: 10px;
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+
+    .private-message-history p {
+      margin: 6px 0;
+      padding: 8px 10px;
+      border-radius: 8px;
+      background: #fff;
+      overflow-wrap: anywhere;
+      white-space: pre-wrap;
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container topbar">
+      <div class="brand"><span class="brand-mark"></span> Joy Funds</div>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="admin.html">Admin</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="btn btn-secondary" type="button" onclick="logoutAdmin()">Logout</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container admin-wrap">
+    <section>
+      <div class="admin-heading">
+        <span class="account-eyebrow">ADMINISTRATION</span>
+        <h1>Account overview</h1>
+        <p>View user profiles, send private messages, adjust balances, and review deposits and withdrawals.</p>
+      </div>
+
+      <div id="adminFlash" class="admin-flash"></div>
+
+      <div class="admin-toolbar">
+        <input id="searchBox" type="text" placeholder="Search by name or email…">
+        <button class="btn btn-primary" type="button" onclick="loadAdminUsers()">Refresh</button>
+      </div>
+
+      <div id="usersContainer">
+        <p>Loading account records…</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Edit user modal -->
+  <div class="modal-backdrop" id="editModal">
+    <div class="modal">
+      <h2>Edit user</h2>
+      <div class="field-group">
+        <label for="editFullName">Full name</label>
+        <input id="editFullName" type="text" maxlength="120">
+      </div>
+      <div class="field-group">
+        <label for="editEmail">Email</label>
+        <input id="editEmail" type="email" maxlength="254">
+      </div>
+      <div class="modal-actions">
+        <button class="btn btn-secondary" type="button" style="color:#0f172a; border-color:#dfe7f5;" onclick="closeEditModal()">Cancel</button>
+        <button class="btn btn-primary" type="button" onclick="saveUserEdit()">Save changes</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Balance adjust modal -->
+  <div class="modal-backdrop" id="balanceModal">
+    <div class="modal">
+      <h2 id="balanceModalTitle">Adjust balance</h2>
+      <p id="balanceModalUser" style="color: var(--muted); margin-top:-8px;"></p>
+      <div class="field-group">
+        <label for="balanceAmount">Amount (₦)</label>
+        <input id="balanceAmount" type="number" min="1" step="1" placeholder="Enter amount">
+      </div>
+      <div class="field-group">
+        <label for="balanceNote">Note (optional)</label>
+        <input id="balanceNote" type="text" maxlength="200" placeholder="Reason for adjustment">
+      </div>
+      <div class="modal-actions">
+        <button class="btn btn-secondary" type="button" style="color:#0f172a; border-color:#dfe7f5;" onclick="closeBalanceModal()">Cancel</button>
+        <button class="btn btn-primary" type="button" onclick="confirmBalanceChange()">Confirm</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Accept deposit modal -->
+  <div class="modal-backdrop" id="acceptModal">
+    <div class="modal">
+      <h2>Accept deposit</h2>
+      <p id="acceptModalInfo" style="color: var(--muted); margin-top:-8px;"></p>
+      <p style="font-size:0.85rem; color: var(--muted); margin:0;">
+        Accepting will credit the deposited amount to the user's balance immediately and start the 4-day doubling timer.
+      </p>
+      <div class="modal-actions">
+        <button class="btn btn-secondary" type="button" style="color:#0f172a; border-color:#dfe7f5;" onclick="closeAcceptModal()">Cancel</button>
+        <button class="btn btn-primary" type="button" onclick="confirmAcceptDeposit()">Accept &amp; fund</button>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>© 2026 Joy Funds</div>
+      <div>Admin actions are logged with audit references.</div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    // -------------------------------------------------------------------
+    // Admin page logic
+    // -------------------------------------------------------------------
+
+    let currentUsers = [];
+    let currentEditEmail = null;
+    let currentBalanceEmail = null;
+    let currentBalanceMode = null; // "add" | "subtract"
+    let currentAcceptEmail = null;
+    let currentAcceptRequestId = null;
+
+    function showFlash(message, type) {
+      const el = document.getElementById('adminFlash');
+      el.textContent = message;
+      el.className = 'admin-flash show ' + (type || 'success');
+      setTimeout(() => { el.className = 'admin-flash'; }, 5000);
+    }
+
+    function formatNaira(value) {
+      const n = Number(value || 0);
+      return '₦' + n.toLocaleString('en-NG', { maximumFractionDigits: 0 });
+    }
+
+    function escapeHtml(str) {
+      return String(str || '')
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#39;');
+    }
+
+    function statusClass(status) {
+      const s = String(status || '').toLowerCase();
+      if (s.includes('doubled')) return 'status-doubled';
+      if (s.includes('paid')) return 'status-paid';
+      if (s.includes('rejected')) return 'status-rejected';
+      if (s.includes('declined')) return 'status-declined';
+      if (s.includes('funded')) return 'status-funded';
+      return 'status-pending';
+    }
+
+    function isPendingDepositReview(activity) {
+      const status = String(activity.status || '').toLowerCase();
+      return activity.type === 'Deposit' &&
+        !activity.doubled &&
+        !activity.funded_at &&
+        !activity.accepted_at &&
+        !status.includes('declined');
+    }
+
+    async function loadAdminUsers() {
+      const container = document.getElementById('usersContainer');
+      container.innerHTML = '<p>Loading account records…</p>';
+      try {
+        const res = await fetch('/api/admin/users', { credentials: 'same-origin' });
+        if (res.status === 401) {
+          window.location.href = 'admin-login.html';
+          return;
+        }
+        const data = await res.json();
+        if (!data.success) throw new Error(data.message || 'Could not load users.');
+        currentUsers = data.users || [];
+        renderUsers(currentUsers);
+      } catch (err) {
+        container.innerHTML = '<p style="color:#991b1b;">' + escapeHtml(err.message) + '</p>';
+      }
+    }
+
+    function renderUsers(users) {
+      const container = document.getElementById('usersContainer');
+      if (!users.length) {
+        container.innerHTML = '<p>No users found.</p>';
+        return;
+      }
+
+      container.innerHTML = users.map(u => {
+        const visibleActivity = (u.activity || []).filter(a =>
+          a.type !== 'Deposit' || isPendingDepositReview(a)
+        );
+        const pendingDeposits = visibleActivity.filter(isPendingDepositReview);
+
+        const activityRows = visibleActivity.map(a => {
+          const isDeposit = a.type === 'Deposit';
+          const canAccept = isPendingDepositReview(a);
+          const canDecline = canAccept;
+          const statusLower = String(a.status || '').toLowerCase();
+          const pendingWithdrawal = a.type === 'Withdrawal request' &&
+            !statusLower.startsWith('paid') && !statusLower.startsWith('rejected');
+          const payoutDetailsComplete = Boolean(a.bank_name && a.account_name && a.account_number);
+          const showActions = canAccept || canDecline || pendingWithdrawal;
+
+          const actions = showActions ? `
+            <div class="activity-row-actions">
+              ${canAccept ? `<button class="btn-small btn-accept" type="button"
+                onclick="openAcceptModal('${escapeHtml(u.email)}','${escapeHtml(a.id || '')}',${Number(a.amount_ngn || 0)})">Accept</button>
+              <button class="btn-small btn-decline" type="button"
+                onclick="declineDeposit('${escapeHtml(u.email)}','${escapeHtml(a.id || '')}')">Decline</button>` : ''}
+              ${pendingWithdrawal && payoutDetailsComplete ? `<button class="btn-small btn-accept" type="button"
+                onclick="reviewWithdrawal('${escapeHtml(a.id || '')}','mark_withdrawal_paid')">Mark paid</button>
+              ` : ''}${pendingWithdrawal ? `<button class="btn-small btn-decline" type="button"
+                onclick="reviewWithdrawal('${escapeHtml(a.id || '')}','reject_withdrawal')">Reject &amp; refund</button>` : ''}
+            </div>
+          ` : '';
+
+          const extra = [];
+          if (isDeposit && a.sender_name) extra.push('From: ' + escapeHtml(a.sender_name));
+          if (isDeposit && a.transfer_reference) extra.push('Ref: ' + escapeHtml(a.transfer_reference));
+          if (isDeposit && a.increase_ngn) extra.push('Increase: +' + formatNaira(a.increase_ngn));
+          if (a.type === 'Withdrawal request' && a.bank_name) extra.push('Bank: ' + escapeHtml(a.bank_name));
+          if (a.type === 'Withdrawal request' && a.account_name) extra.push('Beneficiary: ' + escapeHtml(a.account_name));
+          if (a.type === 'Withdrawal request' && a.account_number) extra.push('Account number: ' + escapeHtml(a.account_number));
+          if (a.type === 'Withdrawal request' && a.note) extra.push('Note: ' + escapeHtml(a.note));
+          if (pendingWithdrawal && !payoutDetailsComplete) extra.push('Payout details missing — do not mark paid');
+
+          return `
+            <div class="activity-row">
+              <div class="activity-row-info">
+                <strong>${escapeHtml(a.type || 'Activity')} — ${formatNaira(a.amount_ngn)}</strong>
+                <small>${escapeHtml(a.date || '')}</small>
+                ${extra.length ? '<small>' + extra.join(' • ') + '</small>' : ''}
+                <span class="status-badge ${statusClass(a.status)}">${escapeHtml(a.status || '')}</span>
+              </div>
+              ${actions}
+            </div>
+          `;
+        }).join('');
+
+        const activityBlock = activityRows
+          ? `<div class="activity-list">${activityRows}</div>`
+          : `<div class="activity-list"><p style="color:var(--muted);">No activity yet.</p></div>`;
+
+        const pendingCount = pendingDeposits.length;
+        const pendingText = pendingCount
+          ? `<span class="status-badge status-pending" style="margin-left:8px;">${pendingCount} pending</span>`
+          : '';
+
+        return `
+          <div class="user-card">
+            <div class="user-card-head">
+              <div>
+                <h2>${escapeHtml(u.full_name)} ${pendingText}</h2>
+                <p>${escapeHtml(u.email)}</p>
+                <p>Member since ${escapeHtml(u.created_at || '—')}</p>
+              </div>
+              <div class="user-card-balance">
+                <span>Balance</span>
+                <strong>${formatNaira(u.balance_ngn)}</strong>
+              </div>
+            </div>
+
+            <div class="user-actions">
+              <button class="btn-small" type="button" onclick="openEditModal('${escapeHtml(u.email)}')">Edit profile</button>
+              <button class="btn-small btn-accept" type="button" onclick="openBalanceModal('${escapeHtml(u.email)}','add')">Add balance</button>
+              <button class="btn-small btn-decline" type="button" onclick="openBalanceModal('${escapeHtml(u.email)}','subtract')">Subtract balance</button>
+            </div>
+
+            ${activityBlock}
+            <div class="private-message-panel">
+              <h3>Private message to ${escapeHtml(u.full_name)}</h3>
+              <textarea maxlength="2000" placeholder="Write a message only this user can see…" aria-label="Private message to ${escapeHtml(u.full_name)}"></textarea>
+              <button class="btn-small btn-accept" type="button" data-send-private-message="${escapeHtml(u.email)}">Send privately</button>
+              <div class="private-message-history">
+                ${(u.private_messages || []).length
+                  ? (u.private_messages || []).slice().reverse().map(message => `<p><strong>Sent ${escapeHtml(message.sent_at || '')}:</strong><br>${escapeHtml(message.message || '')}</p>`).join('')
+                  : '<span>No private messages sent.</span>'}
+              </div>
+            </div>
+          </div>
+        `;
+      }).join('');
+
+      container.querySelectorAll('[data-send-private-message]').forEach(button => {
+        button.addEventListener('click', () => sendPrivateMessage(button.dataset.sendPrivateMessage, button));
+      });
+    }
+
+    async function sendPrivateMessage(email, button) {
+      const panel = button.closest('.private-message-panel');
+      const textarea = panel?.querySelector('textarea');
+      const message = textarea?.value.trim();
+      if (!message) {
+        showFlash('Enter a message before sending.', 'error');
+        return;
+      }
+
+      button.disabled = true;
+      try {
+        const response = await fetch('/api/admin/user/message', {
+          method: 'POST',
+          credentials: 'same-origin',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: new URLSearchParams({ email, message }),
+        });
+        const result = await response.json();
+        if (!response.ok || !result.success) throw new Error(result.message || 'Could not send private message.');
+        showFlash('Private message sent to this user only.', 'success');
+        await loadAdminUsers();
+      } catch (error) {
+        showFlash(error.message || 'Could not send private message.', 'error');
+      } finally {
+        button.disabled = false;
+      }
+    }
+
+    // ---- Edit profile ----
+
+    function openEditModal(email) {
+      const user = currentUsers.find(u => u.email === email);
+      if (!user) return;
+      currentEditEmail = email;
+      document.getElementById('editFullName').value = user.full_name || '';
+      document.getElementById('editEmail').value = user.email || '';
+      document.getElementById('editModal').classList.add('open');
+    }
+
+    function closeEditModal() {
+      document.getElementById('editModal').classList.remove('open');
+      currentEditEmail = null;
+    }
+
+    async function saveUserEdit() {
+      if (!currentEditEmail) return;
+      const fullName = document.getElementById('editFullName').value.trim();
+      const email = document.getElementById('editEmail').value.trim().toLowerCase();
+      if (!fullName || !email) {
+        showFlash('Name and email are required.', 'error');
+        return;
+      }
+
+      try {
+        const res = await fetch('/api/admin/user/edit', {
+          method: 'POST',
+          credentials: 'same-origin',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: new URLSearchParams({
+            current_email: currentEditEmail,
+            full_name: fullName,
+            email: email,
+          }).toString(),
+        });
+        const data = await res.json();
+        if (!res.ok || !data.success) throw new Error(data.message || 'Could not save changes.');
+        showFlash('User profile updated.', 'success');
+        closeEditModal();
+        loadAdminUsers();
+      } catch (err) {
+        showFlash(err.message, 'error');
+      }
+    }
+
+    // ---- Balance adjust ----
+
+    function openBalanceModal(email, mode) {
+      const user = currentUsers.find(u => u.email === email);
+      if (!user) return;
+      currentBalanceEmail = email;
+      currentBalanceMode = mode;
+      document.getElementById('balanceModalTitle').textContent =
+        mode === 'add' ? 'Add balance' : 'Subtract balance';
+      document.getElementById('balanceModalUser').textContent =
+        user.full_name + ' — current balance: ' + formatNaira(user.balance_ngn);
+      document.getElementById('balanceAmount').value = '';
+      document.getElementById('balanceNote').value = '';
+      document.getElementById('balanceModal').classList.add('open');
+    }
+
+    function closeBalanceModal() {
+      document.getElementById('balanceModal').classList.remove('open');
+      currentBalanceEmail = null;
+      currentBalanceMode = null;
+    }
+
+    async function confirmBalanceChange() {
+      if (!currentBalanceEmail || !currentBalanceMode) return;
+      const amount = parseInt(document.getElementById('balanceAmount').value, 10);
+      const note = document.getElementById('balanceNote').value.trim();
+      if (!amount || amount <= 0) {
+        showFlash('Enter a valid amount.', 'error');
+        return;
+      }
+
+      try {
+        const res = await fetch('/api/admin/user/balance', {
+          method: 'POST',
+          credentials: 'same-origin',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: new URLSearchParams({
+            email: currentBalanceEmail,
+            mode: currentBalanceMode,
+            amount: amount,
+            note: note,
+          }).toString(),
+        });
+        const data = await res.json();
+        if (!res.ok || !data.success) throw new Error(data.message || 'Could not adjust balance.');
+        showFlash(data.message || 'Balance updated.', 'success');
+        closeBalanceModal();
+        loadAdminUsers();
+      } catch (err) {
+        showFlash(err.message, 'error');
+      }
+    }
+
+    // ---- Accept deposit ----
+
+    function openAcceptModal(email, requestId, amount) {
+      currentAcceptEmail = email;
+      currentAcceptRequestId = requestId;
+      document.getElementById('acceptModalInfo').textContent =
+        'User: ' + email + ' — Amount: ' + formatNaira(amount);
+      document.getElementById('acceptModal').classList.add('open');
+    }
+
+    function closeAcceptModal() {
+      document.getElementById('acceptModal').classList.remove('open');
+      currentAcceptEmail = null;
+      currentAcceptRequestId = null;
+    }
+
+    async function confirmAcceptDeposit() {
+      if (!currentAcceptEmail || !currentAcceptRequestId) return;
+
+      try {
+        const res = await fetch('/api/admin/requests/action', {
+          method: 'POST',
+          credentials: 'same-origin',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: new URLSearchParams({
+            request_id: currentAcceptRequestId,
+            action: 'accept_deposit',
+          }).toString(),
+        });
+        const data = await res.json();
+        if (!res.ok || !data.success) throw new Error(data.message || 'Could not accept deposit.');
+        showFlash(data.message || 'Deposit accepted and funded.', 'success');
+        closeAcceptModal();
+        loadAdminUsers();
+      } catch (err) {
+        showFlash(err.message, 'error');
+      }
+    }
+
+    // ---- Decline deposit ----
+
+    async function declineDeposit(email, requestId) {
+      try {
+        const res = await fetch('/api/admin/requests/action', {
+          method: 'POST',
+          credentials: 'same-origin',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: new URLSearchParams({
+            request_id: requestId,
+            action: 'decline_deposit',
+          }).toString(),
+        });
+        const data = await res.json();
+        if (!res.ok || !data.success) throw new Error(data.message || 'Could not decline deposit.');
+        showFlash(data.message || 'Deposit declined.', 'success');
+        loadAdminUsers();
+      } catch (err) {
+        showFlash(err.message, 'error');
+      }
+    }
+
+    async function reviewWithdrawal(requestId, action) {
+      const message = action === 'mark_withdrawal_paid'
+        ? 'Confirm the payout has been sent to the displayed beneficiary account?'
+        : 'Reject this withdrawal and refund the amount to the member balance?';
+      if (!window.confirm(message)) return;
+
+      try {
+        const res = await fetch('/api/admin/requests/action', {
+          method: 'POST',
+          credentials: 'same-origin',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: new URLSearchParams({ request_id: requestId, action }),
+        });
+        const data = await res.json();
+        if (!res.ok || !data.success) throw new Error(data.message || 'Could not review withdrawal.');
+        showFlash(data.message || 'Withdrawal updated.', 'success');
+        loadAdminUsers();
+      } catch (err) {
+        showFlash(err.message, 'error');
+      }
+    }
+
+    // ---- Search ----
+
+    document.getElementById('searchBox').addEventListener('input', (e) => {
+      const q = e.target.value.trim().toLowerCase();
+      if (!q) {
+        renderUsers(currentUsers);
+        return;
+      }
+      const filtered = currentUsers.filter(u =>
+        (u.full_name || '').toLowerCase().includes(q) ||
+        (u.email || '').toLowerCase().includes(q)
+      );
+      renderUsers(filtered);
+    });
+
+    // ---- Logout ----
+
+    async function logoutAdmin() {
+      try {
+        await fetch('/api/admin/logout', { method: 'POST', credentials: 'same-origin' });
+      } catch (_) {}
+      window.location.href = 'admin-login.html';
+    }
+
+    // ---- Init ----
+
+    document.addEventListener('DOMContentLoaded', loadAdminUsers);
+  </script>
+</body>
+</html>

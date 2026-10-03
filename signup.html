@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Joy Funds | Sign Up</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="auth-shell">
+    <div class="auth-card">
+      <h1>Create Account</h1>
+      <form class="auth-form" onsubmit="event.preventDefault(); signUpUser();">
+        <div class="field-group">
+          <label for="fullName">Full name</label>
+          <input id="fullName" class="input" type="text" maxlength="120" autocomplete="name" required placeholder="Your full name">
+        </div>
+        <div class="field-group">
+          <label for="email">Email</label>
+          <input id="email" class="input" type="email" maxlength="254" autocomplete="email" required placeholder="you@example.com">
+        </div>
+        <div class="field-group">
+          <label for="password">Password</label>
+          <input id="password" class="input" type="password" minlength="12" maxlength="128" autocomplete="new-password" required placeholder="At least 12 characters">
+        </div>
+        <button type="submit" class="btn btn-primary">Create account</button>
+      </form>
+
+      <div class="flash-msg" id="message"></div>
+
+      <div class="auth-meta">
+        Already have an account? <a href="login.html">Login</a>
+      </div>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

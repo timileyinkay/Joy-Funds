@@ -1,0 +1,13 @@
+# Local Python environment and generated files
+.venv/
+__pycache__/
+*.py[cod]
+
+# Local account data contains personal information and private messages
+users.json
+users.json.tmp
+
+# Local secrets/configuration
+.env
+.env.*
+!.env.example

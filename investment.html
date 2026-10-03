@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Joy Funds | Investment</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .warning-box {
+      display: flex;
+      gap: 12px;
+      margin: 0 0 22px;
+      padding: 16px 18px;
+      background: #fffbeb;
+      border: 1px solid #fde68a;
+      border-radius: 14px;
+      text-align: left;
+    }
+
+    .warning-box-icon {
+      display: grid;
+      place-items: center;
+      width: 28px;
+      height: 28px;
+      flex: 0 0 28px;
+      color: #fff;
+      background: #d97706;
+      border-radius: 50%;
+      font-weight: 800;
+      font-size: 0.95rem;
+    }
+
+    .warning-box h3 {
+      margin: 0 0 6px;
+      color: #713f12;
+      font-size: 0.95rem;
+    }
+
+    .warning-box ul {
+      margin: 0;
+      padding-left: 18px;
+      color: #854d0e;
+      font-size: 0.9rem;
+      line-height: 1.55;
+    }
+
+    .warning-box li + li {
+      margin-top: 6px;
+    }
+
+    .warning-box strong {
+      color: #713f12;
+    }
+
+    .pending-confirm {
+      display: flex;
+      gap: 12px;
+      margin-top: 18px;
+      padding: 16px 18px;
+      background: #ecfdf5;
+      border: 1px solid #a7f3d0;
+      border-radius: 14px;
+      text-align: left;
+    }
+
+    .pending-confirm[hidden] {
+      display: none;
+    }
+
+    .pending-confirm-icon {
+      display: grid;
+      place-items: center;
+      width: 28px;
+      height: 28px;
+      flex: 0 0 28px;
+      color: #fff;
+      background: #16a34a;
+      border-radius: 50%;
+      font-weight: 800;
+      font-size: 0.95rem;
+    }
+
+    .pending-confirm h3 {
+      margin: 0 0 4px;
+      color: #166534;
+      font-size: 0.95rem;
+    }
+
+    .pending-confirm p {
+      margin: 0;
+      color: #15803d;
+      font-size: 0.9rem;
+      line-height: 1.55;
+    }
+
+    .pending-confirm a {
+      color: #166534;
+      font-weight: 800;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container topbar">
+      <div class="brand"><span class="brand-mark"></span> Joy Funds</div>
+      <nav class="nav-links">
+        <a href="calendar.html">Calendar</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="withdrawal.html">Withdrawal</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="btn btn-secondary" type="button" onclick="logoutUser()">Logout</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container page-shell">
+    <section class="auth-shell">
+      <div class="auth-card" style="width:min(560px,100%);">
+        <h1>Deposit notice</h1>
+
+        <div class="warning-box" role="alert">
+          <span class="warning-box-icon" aria-hidden="true">!</span>
+          <div>
+            <h3>Please read before sending</h3>
+            <ul>
+              <li>The <strong>name you enter</strong> must match the name on the account that is sending the funds.</li>
+              <li>The <strong>transfer reference / narration</strong> you enter must match the reference or narration on your payment receipt.</li>
+            </ul>
+          </div>
+        </div>
+
+        <form class="auth-form" onsubmit="event.preventDefault(); showDepositInstructions();">
+          <div class="field-group">
+            <label for="investmentAmount">Amount (₦)</label>
+            <input id="investmentAmount" class="input" type="number" min="1" max="100000000" step="1" required placeholder="Enter amount">
+            <small id="investmentLevelHint" class="muted">Next level will be suggested automatically based on your last accepted deposit.</small>
+          </div>
+          <div class="field-group">
+            <label for="senderName">Name on sending account</label>
+            <input id="senderName" class="input" type="text" maxlength="120" autocomplete="off" required placeholder="Name shown on transfer">
+          </div>
+          <button id="investmentContinue" class="btn btn-primary" type="submit" disabled>Continue to payment details</button>
+        </form>
+
+        <div id="paymentInstructions" class="payment-instructions" hidden>
+          <h2>Transfer instructions</h2>
+          <dl>
+            <div><dt>Bank</dt><dd id="depositBank">PalmPay</dd></div>
+            <div><dt>Account name</dt><dd id="depositAccountName">OLUWATOBILOBA SHERIFFDEEN KEHINDE OFFICAIL</dd></div>
+            <div><dt>Account number</dt><dd id="depositAccountNumber">9073277430</dd></div>
+            <div><dt>Amount</dt><dd id="depositAmount">—</dd></div>
+          </dl>
+
+          <div class="warning-box" role="alert" style="margin-top:6px;">
+            <span class="warning-box-icon" aria-hidden="true">!</span>
+            <div>
+              <h3>Reminder</h3>
+              <ul>
+                <li>Send from an account whose <strong>name matches</strong> what you entered above.</li>
+                <li>Use a <strong>transfer reference / narration</strong> that matches your receipt.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="field-group">
+            <label for="transferReference">Transfer reference / narration (optional)</label>
+            <input id="transferReference" class="input" type="text" maxlength="100" placeholder="As shown on your receipt">
+          </div>
+
+          <button class="btn btn-dark" type="button" onclick="submitDepositNotice(event)">Sent</button>
+
+          <div id="pendingConfirm" class="pending-confirm" hidden>
+            <span class="pending-confirm-icon" aria-hidden="true">✓</span>
+            <div>
+              <h3>Your transaction has been added to pending</h3>
+              <p>
+                It will be confirmed and your funds will double automatically within 4 days.
+                Track it on your <a href="dashboard.html">dashboard</a>.
+              </p>
+            </div>
+          </div>
+
+          <div class="flash-msg" id="investmentMessage" role="status"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>© 2026 Joy Funds</div>
+      <div>Secure and transparent investment platform</div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    function showDepositInstructions() {
+      const amountInput = document.getElementById('investmentAmount');
+      const senderInput = document.getElementById('senderName');
+      const amount = Number(amountInput.value);
+      const sender = senderInput.value.trim();
+      const minimumAmount = getRequiredInvestmentLevel();
+      const nextAllowed = Date.parse(window.nextDepositAllowedAt || '');
+
+      if (Number.isFinite(nextAllowed) && nextAllowed > Date.now()) {
+        alert(`You can make another deposit after ${new Date(nextAllowed).toLocaleString('en-NG', { dateStyle: 'medium', timeStyle: 'short' })}. Deposits must be five days apart.`);
+        return;
+      }
+
+      if (!amountInput.value || !Number.isFinite(amount) || amount <= 0) {
+        alert('Please enter a valid amount.');
+        return;
+      }
+      if (amount < minimumAmount) {
+        alert(`Enter the same amount as your last accepted deposit or more. Minimum: ₦${minimumAmount.toLocaleString()}.`);
+        amountInput.min = String(minimumAmount);
+        amountInput.focus();
+        return;
+      }
+      if (!sender) {
+        alert('Please enter the name on the sending account.');
+        return;
+      }
+
+      document.getElementById('depositAmount').textContent =
+        '₦' + amount.toLocaleString();
+
+      document.getElementById('paymentInstructions').hidden = false;
+      document.getElementById('paymentInstructions')
+        .scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    async function submitDepositNotice(event) {
+      const messageEl = document.getElementById('investmentMessage');
+      const pendingEl = document.getElementById('pendingConfirm');
+      const button = event.currentTarget;
+
+      // Reset any previous state
+      messageEl.style.display = 'none';
+      pendingEl.hidden = true;
+
+      const amount = document.getElementById('investmentAmount').value.trim();
+      const senderName = document.getElementById('senderName').value.trim();
+      const transferReference = document.getElementById('transferReference').value.trim();
+
+      if (!amount || Number(amount) <= 0) {
+        messageEl.textContent = 'Please enter a valid amount.';
+        messageEl.className = 'flash-msg flash-error';
+        messageEl.style.display = 'block';
+        return;
+      }
+      if (!senderName) {
+        messageEl.textContent = 'Please enter the name on the sending account.';
+        messageEl.className = 'flash-msg flash-error';
+        messageEl.style.display = 'block';
+        return;
+      }
+
+      button.disabled = true;
+      button.textContent = 'Sending…';
+
+      try {
+        const body = new URLSearchParams({
+          amount: amount,
+          sender_name: senderName,
+          transfer_reference: transferReference,
+        });
+        const res = await fetch('/api/invest', {
+          method: 'POST',
+          credentials: 'same-origin',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: body.toString(),
+        });
+        const data = await res.json();
+
+        if (!res.ok || !data.success) {
+          throw new Error(data.message || 'Could not submit deposit notice.');
+        }
+
+        // ✅ Success — only now show the pending confirmation box
+        pendingEl.hidden = false;
+        pendingEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        button.textContent = 'Sent';
+        button.disabled = true;
+
+      } catch (err) {
+        messageEl.textContent = err.message || 'Something went wrong.';
+        messageEl.className = 'flash-msg flash-error';
+        messageEl.style.display = 'block';
+        button.disabled = false;
+        button.textContent = 'Sent';
+      }
+    }
+  </script>
+</body>
+</html>

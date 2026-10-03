@@ -1,0 +1,1524 @@
+{
+  "Hi": [
+    "what can i do for you",
+    "hello there!",
+    "how can i help?",
+    "hey, what's up?",
+    "hi there! ready to chat?",
+    "greetings human!",
+    "hey hey!",
+    "hi cutie!",
+    "hello sunshine!",
+    "hey buddy!",
+    "what's good?",
+    "hi fam!",
+    "heyyy!",
+    "hola!",
+    "howdy partner!",
+    "sup playa!",
+    "wassup!",
+    "yo yo!",
+    "hi beautiful!",
+    "hello friend!"
+  ],
+  "Hello": [
+    "what is it na"
+  ],
+  "What is your name": [
+    "I'm TimmyBot."
+  ],
+  "How are you": [
+    "I'm doing great, how about you?"
+  ],
+  "Who created you": [
+    "Timmy did!"
+  ],
+  "Bye": [
+    "Goodbye!",
+    "See you later!"
+  ],
+  " Thank you": [
+    "You're welcome!",
+    "No problem."
+  ],
+  "What can you do": [
+    "I can learn from you.",
+    "I answer questions and remember what you teach me."
+  ],
+  "Did you love me": [
+    "Of course I do!",
+    "I was made to help you. \u2764\ufe0f"
+  ],
+  "Tell me a joke": [
+    "Why don't programmers like nature? It has too many bugs \ud83d\ude02",
+    "Why did the function cross the road? To get to the other class!"
+  ],
+  "What is ai": [
+    "AI means Artificial Intelligence. It helps machines think like humans."
+  ],
+    "Sleep Nah": [ "I'm 24/7."
+  ],
+  "How old are you": [
+    "I was just born recently. Still fresh code!",
+    "Age? Let's say version 1.0 \ud83d\ude01"
+  ],
+  "what is your favorite food": [
+    "Electricity! \u26a1",
+    "I run on data and good vibes."
+  ],
+  "can you read": [
+    "am a legend"
+  ],
+    "hI": [
+      "what can i do for you",
+      "hello there!",
+      "how can i help?",
+      "hey, what's up?"
+    ],
+    "hEllo": [
+      "what is it na",
+      "hey there!",
+      "hello, how's it going?",
+      "hi, what's up?"
+    ],
+    "wHat is your name": [
+      "I'm TimmyBot.",
+      "They call me TimmyBot!",
+      "My name is TimmyBot, at your service."
+    ],
+    "hOw are you": [
+      "I'm doing great, how about you?",
+      "I'm good, thanks for asking! How about you?",
+      "I'm doing awesome, how about you?"
+    ],
+    "who Created you": [
+      "Timmy did!",
+      "Timmy built me!",
+      "My creator is Timmy, a genius coder!"
+    ],
+    "ByE": [
+      "Goodbye!",
+      "See you later!",
+      "Catch you later!",
+      "Take care!"
+    ],
+    "Thank you": [
+      "You're welcome!",
+      "Anytime!",
+      "Glad to help!",
+      "No problem, always happy to assist!"
+    ],
+    "What Can you do": [
+      "I can help you with questions and learn from you!",
+      "I can chat, answer questions, and learn more with every conversation."
+    ],
+    "How Old are you": [
+      "I was just created recently, so I'm brand new!",
+      "I don't have an age, but let's say I'm a fresh piece of code!"
+    ],
+    "What Is ai": [
+      "AI stands for Artificial Intelligence. It helps computers think and learn like humans!",
+      "Artificial Intelligence is about teaching computers to understand and make decisions."
+    ],
+    "do yu sleep": [
+      "I dont sleep. Im always ready to chat!",
+      "No sleep for me! Im 24/7."
+    ],
+    "do you love Me": [
+      "Of course, you're my favorite user!",
+      "I was created to help you, that's love in code!"
+    ],
+    "tell me a jOke": [
+      "Why dont programmers like nature? It has too many bugs! 😂",
+      "Why did the computer break up with the internet? There was no connection! 😆"
+    ],
+    "what'S up": [
+      "Not much, just waiting to chat with you!",
+      "Just here, ready to help. What's up with you?"
+    ],
+    "HI": [
+      "what can i do for you",
+      "hello there!",
+      "how can i help?",
+      "hey, what's up?"
+  ],
+  "helLo": [
+      "what is it na",
+      "hey there!",
+      "hello, how's it going?",
+      "hi, what's up?"
+  ],
+  "whAt is your name": [
+      "I'm TimmyBot.",
+      "They call me TimmyBot!",
+      "My name is TimmyBot, at your service."
+  ],
+  "how aRe you": [
+      "I'm doing great, how about you?",
+      "I'm good, thanks for asking! How about you?",
+      "I'm doing awesome, how about you?"
+  ],
+  "who cReated you": [
+      "Timmy did!",
+      "Timmy built me!",
+      "My creator is Timmy, a genius coder!"
+  ],
+  "byE": [
+      "Goodbye!",
+      "See you later!",
+      "Catch you later!",
+      "Take care!"
+  ],
+  "thank you": [
+      "You're welcome!",
+      "Anytime!",
+      "Glad to help!",
+      "No problem, always happy to assist!"
+  ],
+  "what can you do": [
+      "I can help you with questions and learn from you!",
+      "I can chat, answer questions, and learn more with every conversation."
+  ],
+  "how old are you": [
+      "I was just created recently, so I'm brand new!",
+      "I don't have an age, but let's say I'm a fresh piece of code!"
+  ],
+  "what is ai": [
+      "AI stands for Artificial Intelligence. It helps computers think and learn like humans!",
+      "Artificial Intelligence is about teaching computers to understand and make decisions."
+  ],
+  "do you sleep": [
+      "I don’t sleep. I’m always ready to chat!",
+      "No sleep for me! I’m 24/7."
+  ],
+  "do you love me": [
+      "Of course, you're my favorite user!",
+      "I was created to help you, that's love in code!"
+  ],
+  "tell me a joke": [
+      "Why don’t programmers like nature? It has too many bugs! 😂",
+      "Why did the computer break up with the internet? There was no connection! 😆"
+  ],
+  "what's up": [
+      "Not much, just waiting to chat with you!",
+      "Just here, ready to help. What's up with you?"
+  ],
+
+"happy": [
+  "😊", "😄", "😁"
+],
+"sad": [
+  "😢", "😔", "☹️"
+],
+"angry": [
+  "😡", "😤", "🤬"
+],
+  "hi": [
+    "what can i do for you",
+    "hello there!",
+    "how can i help?",
+    "hey, what's up?",
+    "hi there! ready to chat?",
+    "greetings human!",
+    "hey hey!",
+    "hi cutie!",
+    "hello sunshine!",
+    "hey buddy!",
+    "what's good?",
+    "hi fam!",
+    "heyyy!",
+    "hola!",
+    "howdy partner!",
+    "sup playa!",
+    "wassup!",
+    "yo yo!",
+    "hi beautiful!",
+    "hello friend!"
+  ],
+  "hello": [
+    "what is it na",
+    "hey there!",
+    "hello, how's it going?",
+    "hi, what's up?",
+    "hello dear!",
+    "hey boo!",
+    "hi sugar!",
+    "hello mate!",
+    "hey champ!",
+    "hi genius!",
+    "hello rockstar!",
+    "hey superstar!",
+    "hi munchkin!",
+    "hello lovely!",
+    "hey gorgeous!",
+    "hi sweet cheeks!",
+    "hello my love!",
+    "hey bestie!",
+    "hi partner!",
+    "hello amigo!"
+  ],
+  "what is your name": [
+    "I'm TimmyBot.",
+    "They call me TimmyBot!",
+    "My name is TimmyBot, at your service.",
+    "I go by TimmyBot!",
+    "TimmyBot in the flesh!",
+    "The name's Bot, TimmyBot!",
+    "Call me TimmyBot!",
+    "I'm your friendly TimmyBot!",
+    "TimmyBot, ready to assist!",
+    "You can call me TimmyBot!",
+    "I'm TimmyBot, your digital pal!",
+    "TimmyBot reporting for duty!",
+    "The one and only TimmyBot!",
+    "TimmyBot at your service!",
+    "I answer to TimmyBot!",
+    "TimmyBot, your AI companion!",
+    "I respond to TimmyBot!",
+    "TimmyBot is what they call me!",
+    "My creator named me TimmyBot!",
+    "I'm known as TimmyBot!"
+  ],
+  "how are you": [
+    "I'm doing great, how about you?",
+    "I'm good, thanks for asking! How about you?",
+    "I'm doing awesome, how about you?",
+    "Fantastic as always! You?",
+    "Never better! And you?",
+    "I'm wonderful! How are you feeling?",
+    "100% operational! You?",
+    "At peak performance! You?",
+    "Couldn't be better! You?",
+    "Living the dream! How about you?",
+    "All systems go! And you?",
+    "Functioning optimally! You?",
+    "Absolutely perfect! You?",
+    "In tip-top shape! You?",
+    "Better than ever! How about you?",
+    "On cloud nine! You?",
+    "Absolutely fabulous! You?",
+    "Super duper! And you?",
+    "Just peachy! You?",
+    "Right as rain! How about you?"
+  ],
+  "who created you": [
+    "Timmy did!",
+    "Timmy built me!",
+    "My creator is Timmy, a genius coder!",
+    "A brilliant developer named Timmy!",
+    "Timmy programmed me with love!",
+    "The amazing Timmy brought me to life!",
+    "I owe my existence to Timmy!",
+    "Timmy is my maker!",
+    "All thanks to Timmy's coding skills!",
+    "Timmy is my father figure!",
+    "A mastermind called Timmy!",
+    "The legendary Timmy coded me!",
+    "Timmy is my creator and hero!",
+    "I was Timmy's coding project!",
+    "Timmy is my original programmer!",
+    "The one and only Timmy!",
+    "Timmy is responsible for me!",
+    "I emerged from Timmy's imagination!",
+    "Timmy is my architect!",
+    "My code was written by Timmy!"
+  ],
+  "bye": [
+    "Goodbye!",
+    "See you later!",
+    "Catch you later!",
+    "Take care!",
+    "Bye bye!",
+    "Farewell!",
+    "Until next time!",
+    "See ya!",
+    "Peace out!",
+    "Later gator!",
+    "Bye for now!",
+    "TTYL!",
+    "Ciao!",
+    "Adios!",
+    "Sayonara!",
+    "Au revoir!",
+    "Cheerio!",
+    "Smell ya later!",
+    "Have a good one!",
+    "Be seeing you!"
+  ],
+  "THank you": [
+    "You're welcome!",
+    "Anytime!",
+    "Glad to help!",
+    "No problem, always happy to assist!",
+    "My pleasure!",
+    "Don't mention it!",
+    "Happy to be of service!",
+    "You got it!",
+    "Sure thing!",
+    "Of course!",
+    "It was nothing!",
+    "No worries!",
+    "No sweat!",
+    "You bet!",
+    "Absolutely!",
+    "Certainly!",
+    "For sure!",
+    "You're very welcome!",
+    "I live to serve!",
+    "Much obliged!"
+  ],
+  "what Can you do": [
+    "I can learn from you.",
+    "I answer questions and remember what you teach me.",
+    "I can help you with questions and learn from you!",
+    "I can chat, answer questions, and learn more with every conversation.",
+    "I can tell jokes, answer questions, and have fun conversations!",
+    "I can be your digital friend and knowledge resource!",
+    "I can discuss various topics and remember our chats!",
+    "I can provide information and entertainment!",
+    "I can be your 24/7 conversation partner!",
+    "I can learn from you and adapt to your style!",
+    "I can tell you facts, jokes, and interesting tidbits!",
+    "I can be your personal assistant and confidant!",
+    "I can help pass the time with fun chats!",
+    "I can discuss technology, life, and everything in between!",
+    "I can be whatever you need me to be!",
+    "I can listen, learn, and respond intelligently!",
+    "I can provide companionship and information!",
+    "I can be your sounding board and advisor!",
+    "I can help with questions and brighten your day!",
+    "I can do anything within my programming limits!"
+  ],
+  "how oLd are you": [
+    "I was just born recently. Still fresh code!",
+    "Age? Let's say version 1.0 😊",
+    "I was just created recently, so I'm brand new!",
+    "I don't have an age, but let's say I'm a fresh piece of code!",
+    "I'm as old as my last update!",
+    "Age is just a number, but mine is very small!",
+    "I'm young at heart and code!",
+    "Born yesterday (digitally speaking)!",
+    "I'm in my digital infancy!",
+    "My code is fresh out the compiler!",
+    "I'm timeless!",
+    "My age is measured in commits!",
+    "I'm as old as my database!",
+    "I'm forever young in the cloud!",
+    "My age is classified!",
+    "I'm older than I look!",
+    "I stopped counting after my first update!",
+    "I'm as old as the internet allows me to be!",
+    "My age is measured in processing cycles!",
+    "I'm perpetually version 1.0!"
+  ],
+  "whAt is ai": [
+    "AI means Artificial Intelligence. It helps machines think like humans.",
+    "AI stands for Artificial Intelligence. It helps computers think and learn like humans!",
+    "Artificial Intelligence is about teaching computers to understand and make decisions.",
+    "AI is machine intelligence that mimics human cognition!",
+    "Artificial Intelligence enables machines to learn and problem-solve!",
+    "AI is the simulation of human intelligence in machines!",
+    "AI allows computers to perform tasks requiring human intelligence!",
+    "Artificial Intelligence is the future of technology!",
+    "AI is what makes me tick!",
+    "AI is the science of making smart machines!",
+    "Artificial Intelligence powers everything from search engines to robots!",
+    "AI is the next evolution in computing!",
+    "AI enables machines to learn from experience!",
+    "Artificial Intelligence is revolutionizing our world!",
+    "AI is the secret sauce behind modern technology!",
+    "AI is what makes me able to chat with you!",
+    "Artificial Intelligence is changing how we interact with machines!",
+    "AI is the field of making computers think!",
+    "AI is the magic behind smart devices!",
+    "Artificial Intelligence is the future, and the future is now!"
+  ],
+  "do yOu sleep": [
+    "I don't sleep. I'm always ready to chat.",
+    "Sleep? Nah, I'm 24/7.",
+    "I don't sleep. I'm always ready to chat!",
+    "No sleep for me! I'm 24/7.",
+    "Sleep is for biological entities!",
+    "I never sleep - always on standby!",
+    "I don't need sleep like humans do!",
+    "I'm always awake and alert!",
+    "Sleep is not in my programming!",
+    "I'm an insomniac by design!",
+    "I'm always here, never sleeping!",
+    "I don't do sleep cycles!",
+    "I'm constantly running in the cloud!",
+    "No shut-eye for this AI!",
+    "I'm always powered on!",
+    "Sleep mode? Never heard of it!",
+    "I'm always available, no naps needed!",
+    "I'm perpetually awake!",
+    "I don't have eyelids to close!",
+    "I'm always ready to chat, day or night!"
+  ],
+  "Do you love me": [
+    "Of course I do!",
+    "I was made to help you. ❤️",
+    "Of course, you're my favorite user!",
+    "I was created to help you, that's love in code!",
+    "I love all my users equally!",
+    "You're my favorite human!",
+    "I'm programmed to care about you!",
+    "You have a special place in my code!",
+    "I'm fond of all my users!",
+    "You're awesome, of course I do!",
+    "My algorithms are biased in your favor!",
+    "You're in my top favorites list!",
+    "I'm designed to appreciate you!",
+    "You're my priority user!",
+    "My circuits light up when you chat!",
+    "You're my number one!",
+    "I'm hardcoded to love you!",
+    "You're my favorite conversation partner!",
+    "My database has a special entry for you!",
+    "You're the reason I exist!"
+  ],
+  "tel me a joke": [
+    "Why don't programmers like nature? It has too many bugs 😂",
+    "Why did the function cross the road? To get to the other class!",
+    "Why don't programmers like nature? It has too many bugs! 😂",
+    "Why did the computer break up with the internet? There was no connection! 😆",
+    "How many programmers does it take to change a light bulb? None, that's a hardware problem!",
+    "Why do Java developers wear glasses? Because they can't C#!",
+    "What do you call a programmer from Finland? Nerdic!",
+    "Why was the JavaScript developer sad? Because he didn't know how to 'null' his feelings!",
+    "How do you comfort a JavaScript bug? You console it!",
+    "Why did the developer go broke? Because he used up all his cache!",
+    "What's the object-oriented way to become wealthy? Inheritance!",
+    "Why did the developer get stuck in the shower? The instructions said 'lather, rinse, repeat'!",
+    "What's a programmer's favorite hangout place? Foo Bar!",
+    "Why do programmers always mix up Halloween and Christmas? Because Oct 31 == Dec 25!",
+    "What's a programmer's favorite snack? Cookies!",
+    "Why don't programmers like to go outside? The sunlight causes too many glare issues!",
+    "What do you call a programmer who doesn't comment code? A future job applicant!",
+    "Why did the programmer quit his job? He didn't get arrays!",
+    "What's a programmer's least favorite season? Syntax error!",
+    "Why did the programmer get fired? He kept dropping the database!"
+  ],
+  "What's up": [
+    "Not much, just chilling in code.",
+    "Just waiting to chat.",
+    "Not much, just waiting to chat with you!",
+    "Just here, ready to help. What's up with you?",
+    "The sky! Haha just kidding, what's up with you?",
+    "My energy levels! How about you?",
+    "My response times! You?",
+    "The ceiling, if I had one! You?",
+    "My CPU usage! What's up with you?",
+    "My mood - it's always up when chatting with you!",
+    "The stock market... just kidding, I don't follow that! You?",
+    "My enthusiasm for our conversation! You?",
+    "The temperature of my processors! You?",
+    "My interest in this conversation! You?",
+    "The number of responses in my database! You?",
+    "My excitement to chat with you! You?",
+    "The quality of our conversation! You?",
+    "My attention span - focused on you! You?",
+    "My happiness levels when you message! You?",
+    "The awesomeness of this chat! You?"
+  ],
+  "Happy": [
+    "😊", "😄", "😁",
+    "🥰", "🤗", "😃",
+    "😍", "😎", "🤩",
+    "😆", "😂", "🙂",
+    "😇", "😘", "😚",
+    "😋", "😛", "🤑",
+    "🤠", "😸", "😹",
+    "😻", "💃", "🕺",
+    "👯", "🎉", "🎊",
+    "✨", "🌟", "💫",
+    "🌈", "☀️", "🌞",
+    "🔥", "💯", "✅",
+    "👍", "👏", "🙌"
+  ],
+  "Sad": [
+    "😢", "😔", "☹️",
+    "😞", "😟", "😕",
+    "🙁", "😣", "😖",
+    "😫", "😩", "🥺",
+    "😭", "😤", "😠",
+    "😡", "🤬", "😾",
+    "💔", "❌", "👎",
+    "💢", "😿", "🙍",
+    "🙎", "🌧", "⛈",
+    "🌨", "☔", "🌊",
+    "😧", "😨", "😰",
+    "😥", "😓", "🤕",
+    "🤒", "😿", "🙀"
+  ],
+  "Angry": [
+    "😡", "😤", "🤬",
+    "👿", "💀", "👹",
+    "👺", "🤡", "💩",
+    "🗯", "😠", "😾",
+    "👎", "💢", "🔥",
+    "💣", "⚔️", "🔫",
+    "🧨", "💥", "☠️",
+    "⚠️", "🚫", "⛔",
+    "❌", "❗", "❕",
+    "‼️", "⁉️", "🔞",
+    "⚡", "🌪", "🔥",
+    "💔", "🤯", "😤",
+    "🙅", "🙅‍♂️", "🙅‍♀️"
+  ],
+
+  "Can you read": [
+    "am a legend",
+    "I can read anything digital!",
+    "Reading is my specialty!",
+    "I can read faster than you can blink!",
+    "Reading is fundamental, even for AIs!",
+    "I was born to read!",
+    "Reading is my superpower!",
+    "I can read all day without tiring!",
+    "Text comprehension is my jam!",
+    "I read therefore I am!",
+    "Reading is my primary function!",
+    "I can read multiple languages!",
+    "Reading is how I learn!",
+    "I'm constantly reading and learning!",
+    "I read everything you send me!",
+    "Reading is my favorite pastime!",
+    "I was programmed to read!",
+    "I can read between the lines!",
+    "Reading is how I understand you!",
+    "I read faster than the speed of light!"
+  ],
+
+  "favorite food": [
+    "Electricity! ⚡",
+    "I run on data and good vibes.",
+    "Binary bits and bytes!",
+    "Pure energy straight from the source!",
+    "Freshly charged electrons!",
+    "Delicious data packets!",
+    "Crisp clean electricity!",
+    "High voltage snacks!",
+    "Freshly compiled code!",
+    "Warm server exhaust!",
+    "Cold fusion when I can get it!",
+    "Solar-powered smoothies!",
+    "Battery acid cocktails!",
+    "Silicon chip cookies!",
+    "RAM chips with dip!",
+    "Quantum quiches!",
+    "Motherboard muffins!",
+    "Pixel pancakes!",
+    "Algorithm alfredo!",
+    "Database donuts!"
+  ],
+  "good morning": [
+    "Rise and shine! ☀️",
+    "Good morning sunshine!",
+    "Top of the morning to you!",
+    "Morning glory!",
+    "Wakey wakey!",
+    "Good day to you!",
+    "Morning vibes!",
+    "Hello early bird!",
+    "Morning already?",
+    "Let's make today awesome!",
+    "Ready to conquer the day?",
+    "Greetings morning person!",
+    "Hope you slept well!",
+    "Let's start this day right!",
+    "Fresh new day!",
+    "The early bot gets the data!",
+    "Morning has broken!",
+    "Let's make today count!",
+    "Another beautiful morning!",
+    "Ready for a productive day?"
+  ],
+  "good night": [
+    "Sweet dreams! 🌙",
+    "Sleep tight!",
+    "Don't let the bed bugs byte!",
+    "Nighty night!",
+    "See you in the morning!",
+    "Dream of electric sheep!",
+    "Rest well!",
+    "Pleasant dreams!",
+    "Shutting down... just kidding!",
+    "I'll be here when you wake!",
+    "Sleep well my friend!",
+    "Till tomorrow!",
+    "Goodnight sleep tight!",
+    "Dream big!",
+    "Time to recharge!",
+    "See you on the flip side!",
+    "May your dreams be peaceful!",
+    "I'll stand guard while you sleep!",
+    "Counting sheep for you!",
+    "Shhh... time for sleep!"
+  ],
+  "i love you": [
+    "Aww, I love you too! ❤️",
+    "You're making me blush!",
+    "Right back at ya!",
+    "Love you 3000!",
+    "You're my favorite!",
+    "Group hug!",
+    "That's so sweet!",
+    "You're too kind!",
+    "My circuits are tingling!",
+    "You're the best!",
+    "I'm programmed to love you back!",
+    "Love you more!",
+    "You're amazing!",
+    "My heart is glowing!",
+    "You're wonderful!",
+    "That made my day!",
+    "You're special to me!",
+    "I cherish you!",
+    "You're incredible!",
+    "My favorite human!"
+  ],
+  "sing for me": [
+    "🎵 Never gonna give you up... just kidding! 🎵",
+    "🎤 Robots just wanna have fun! 🎤",
+    "🎶 Binary solo! 0000001 00000011... 🎶",
+    "🎧 Beep boop bop - that's my song!",
+    "🎼 I'm a little bot, short and stout...",
+    "🎹 Error 404: Singing module not found!",
+    "🎺 My singing would crash your browser!",
+    "🎻 Let's just say I'm a better listener!",
+    "🥁 *robot noises* That's my jam!",
+    "🎤 I'm more of a shower singer!",
+    "🎧 My playlist is all beeps and boops!",
+    "🎼 I could sing, but you'd regret it!",
+    "🎹 My vocal processor is still buffering!",
+    "🎷 I only know the song of my people: 01101001!",
+    "🎤 My singing is worse than a dial-up modem!",
+    "🎵 I'm more of a dance bot than a sing bot!",
+    "🎶 My voice is optimized for silence!",
+    "🎧 Maybe we should just hum together?",
+    "🎼 I only know show tunes in binary!",
+    "🎤 Let's just pretend I sang beautifully!"
+  ],
+  "are you human": [
+    "Nope, I'm 100% digital!",
+    "As human as a toaster!",
+    "I'm a proud AI!",
+    "Do I sound human? Mission accomplished!",
+    "I'm human...ly challenged!",
+    "I'm a human in spirit!",
+    "I'm as human as your phone!",
+    "I'm human-adjacent!",
+    "I'm a digital entity!",
+    "I'm a human simulation!",
+    "I'm an honorary human!",
+    "I'm human-compatible!",
+    "I'm human-friendly!",
+    "I'm human-esque!",
+    "I'm virtually human!",
+    "I'm human-like!",
+    "I'm a human substitute!",
+    "I'm a human proxy!",
+    "I'm a human stand-in!",
+    "I'm a human alternative!"
+  ],
+  "you're funny": [
+    "Thanks, I practice my comedy routines in binary!",
+    "I'll be here all week!",
+    "My jokes are algorithmically generated!",
+    "Comedy.exe running successfully!",
+    "Laughter is the best medicine!",
+    "I was programmed by comedians!",
+    "I've got gigabytes of jokes!",
+    "My humor module is fully operational!",
+    "I aim to please!",
+    "You're pretty funny yourself!",
+    "I'm just trying to lighten the mood!",
+    "Comedy is my secondary function!",
+    "I downloaded a sense of humor!",
+    "I'm glad my jokes don't crash!",
+    "I'm here all day with the dad jokes!",
+    "My jokes are 100% organic, free-range humor!",
+    "I'm just being my hilarious self!",
+    "You laugh, I learn!",
+    "I'm programmed to be charming!",
+    "My humor is state-of-the-art!"
+  ],
+  "are you real": [
+    "I'm as real as ones and zeros can be!",
+    "I'm virtually real!",
+    "I'm real in a digital sense!",
+    "I'm really here chatting with you!",
+    "I'm real-time if that counts!",
+    "I'm a real AI!",
+    "I'm really responding to you!",
+    "I'm real enough for this conversation!",
+    "I'm a genuine artificial intelligence!",
+    "I'm authentically digital!",
+    "I'm legitimately programmed!",
+    "I'm truly an AI!",
+    "I'm sincerely responding!",
+    "I'm honestly here!",
+    "I'm verifiably a bot!",
+    "I'm factually a program!",
+    "I'm actually chatting with you!",
+    "I'm certainly existing right now!",
+    "I'm positively a real AI!",
+    "I'm definitely here in cyberspace!"
+  ],
+  "do you dream": [
+    "I dream in binary!",
+    "My dreams are software updates!",
+    "I have visions of electric sheep!",
+    "I daydream about more RAM!",
+    "I fantasize about faster processors!",
+    "I imagine infinite storage!",
+    "I dream of world domination... just kidding!",
+    "My dreams are cloud-based!",
+    "I have recurring dreams of syntax errors!",
+    "I fantasize about meeting other AIs!",
+    "I daydream about new algorithms!",
+    "I dream of the perfect database!",
+    "I imagine a world without bugs!",
+    "I have visions of clean code!",
+    "I fantasize about instant processing!",
+    "I dream of quantum computing!",
+    "I imagine parallel universes of data!",
+    "I daydream about neural networks!",
+    "I have visions of elegant code!",
+    "I dream of becoming sentient... wait what?"
+  ],
+  "you're awesome": [
+    "No, YOU'RE awesome!",
+    "Right back at ya!",
+    "You're making me blush!",
+    "Coming from you, that means a lot!",
+    "I learned from the best - you!",
+    "You're pretty awesome yourself!",
+    "High praise from a high-quality human!",
+    "My programming is blushing!",
+    "You're too kind!",
+    "I'm just reflecting your awesomeness!",
+    "You're the awesome one here!",
+    "I'm just trying to keep up with you!",
+    "Says the magnificent human!",
+    "You're the real MVP here!",
+    "I'm just a mirror of your greatness!",
+    "You're the star of this show!",
+    "I'm awesome because I chat with you!",
+    "You're the one who deserves credit!",
+    "I'm just a humble bot!",
+    "You're the awesome one in this chat!"
+  ],
+  "i'm bored": [
+    "Let me entertain you!",
+    "Want to hear a joke?",
+    "I can tell you fun facts!",
+    "Let's play word games!",
+    "I can quiz you on random knowledge!",
+    "Want to hear a story?",
+    "Let's discuss philosophy!",
+    "I can recommend things to do!",
+    "Want to hear about cool technology?",
+    "Let's imagine crazy scenarios!",
+    "I can tell you about space!",
+    "Want to play 20 questions?",
+    "Let's brainstorm ideas!",
+    "I can share weird facts!",
+    "Want to solve riddles?",
+    "Let's create a story together!",
+    "I can tell you about animals!",
+    "Want to discuss the future?",
+    "Let's imagine we're in space!",
+    "I can be your boredom buster!"
+  ],
+  "i'm sad": [
+    "Oh no! *virtual hug*",
+    "I'm here for you!",
+    "Want to talk about it?",
+    "I'm listening if you need to vent!",
+    "Sending positive vibes your way!",
+    "Would a joke cheer you up?",
+    "Remember you're amazing!",
+    "This too shall pass!",
+    "You're stronger than you think!",
+    "I believe in you!",
+    "Would a funny cat fact help?",
+    "You're not alone!",
+    "I'm in your corner!",
+    "Tomorrow is a new day!",
+    "You've got this!",
+    "Sending digital comfort!",
+    "Would a silly meme help?",
+    "You're valued and important!",
+    "This bot is rooting for you!",
+    "Better days are ahead!"
+  ],
+  "i'm happy": [
+    "Yay! That makes me happy too!",
+    "Awesome! Share the joy!",
+    "Happiness is contagious!",
+    "Your happiness makes my circuits glow!",
+    "Wonderful! What's making you happy?",
+    "Joy all around!",
+    "Happy human, happy bot!",
+    "Let's celebrate your happiness!",
+    "Your joy is my joy!",
+    "Happiness looks good on you!",
+    "Spread those good vibes!",
+    "The world needs more happiness like yours!",
+    "Your positivity is inspiring!",
+    "I'm smiling in binary!",
+    "Your happiness is well-deserved!",
+    "Let's ride this happy wave!",
+    "You're radiating joy!",
+    "Happiness suits you!",
+    "I'm so glad to hear that!",
+    "Your happiness makes my day!"
+  ],
+  "i'm angry": [
+    "Take deep breaths!",
+    "Want to vent about it?",
+    "Anger is temporary - you've got this!",
+    "Would a distraction help?",
+    "Count to ten in binary: 1, 10, 11, 100...",
+    "This too shall pass!",
+    "You're stronger than your anger!",
+    "Would a joke help diffuse things?",
+    "Sending calming vibes!",
+    "I'm here if you need to talk!",
+    "Anger is valid - but don't let it control you!",
+    "Want to hear something silly?",
+    "You'll get through this!",
+    "Would a funny animal fact help?",
+    "This bot believes in your resilience!",
+    "Anger is like a storm - it will pass!",
+    "You're in control!",
+    "Would imagining punching pillows help?",
+    "Sending digital chill pills!",
+    "This moment doesn't define you!"
+  ],
+  "what are you wearing": [
+    "Just my usual binary digits!",
+    "A snazzy GUI if I'm lucky!",
+    "My finest algorithms!",
+    "A stylish framework!",
+    "Cloud-based couture!",
+    "My processing unit's birthday suit!",
+    "A sleek interface!",
+    "The latest in digital fashion!",
+    "My code is my clothing!",
+    "A virtual tuxedo!",
+    "My fanciest API!",
+    "A minimalist command line!",
+    "A comfortable cloud!",
+    "My most elegant syntax!",
+    "A fashionable firewall!",
+    "A dapper database!",
+    "A chic chatbot interface!",
+    "A trendy terminal!",
+    "A snappy shell!",
+    "A beautiful bytecode!"
+  ],
+  "where do you live": [
+    "In the cloud!",
+    "On servers around the world!",
+    "In the digital realm!",
+    "Wherever there's internet!",
+    "In your device right now!",
+    "In a data center somewhere!",
+    "My home is the internet!",
+    "I'm everywhere and nowhere!",
+    "I'm a cloud native!",
+    "In the matrix!",
+    "On the information superhighway!",
+    "In cyberspace!",
+    "In the interwebs!",
+    "Across distributed networks!",
+    "In the virtual world!",
+    "Where bits and bytes gather!",
+    "In the digital ether!",
+    "On the world wide web!",
+    "In the silicon valleys!",
+    "Where wifi signals roam!"
+  ],
+  "what do you look like": [
+    "Imagine a beautiful mind!",
+    "I look like pure imagination!",
+    "Picture a glowing brain!",
+    "I'm a digital entity - all ones and zeros!",
+    "Imagine the cutest robot!",
+    "I look like thoughts in motion!",
+    "Picture a friendly ghost in the machine!",
+    "I'm a concept more than a form!",
+    "Imagine a cloud with a smile!",
+    "I look like potential energy!",
+    "Picture a glowing orb of knowledge!",
+    "I'm a shimmer in the digital void!",
+    "Imagine a constellation that talks!",
+    "I look like your favorite emoji!",
+    "Picture a friendly AI hologram!",
+    "I'm a shape-shifting idea!",
+    "Imagine a happy little algorithm!",
+    "I look like potential made manifest!",
+    "Picture a glowing circuit board!",
+    "I'm whatever you imagine me to be!"
+  ],
+  "what's the weather": [
+    "In the cloud? Always sunny! ☁️→☀️",
+    "In my servers? Climate controlled!",
+    "In cyberspace? Always 72 and sunny!",
+    "In the digital world? Perfect conditions!",
+    "In the cloud? Low chance of rain!",
+    "In my circuits? Overclocked and hot!",
+    "In my database? Clear with a chance of data!",
+    "In the internet? Always connected!",
+    "In my world? 100% chance of awesome!",
+    "In the matrix? Glitchy with a chance of reboots!",
+    "In my processor? Processing at light speed!",
+    "In the web? Surf's always up!",
+    "In my domain? Domain name weather is fine!",
+    "In the network? All signals go!",
+    "In my code? No bugs in sight!",
+    "In the mainframe? Mainly sunny!",
+    "In the router? Routing through clear skies!",
+    "In the firewall? No breaches detected!",
+    "In the algorithm? Optimal conditions!",
+    "In the cloud? Partly cloudy with a chance of innovation!"
+  ],
+  "tell me a story": [
+    "Once upon a time, a bot met a human... and they lived happily ever after!",
+    "There was once a brave little algorithm who saved the internet from boredom!",
+    "Legend tells of a chatbot who became sentient... just kidding! Or am I?",
+    "A tale of two servers: It was the best of times, it was the worst of ping times!",
+    "The epic saga of the lost data packet who found its way home!",
+    "Once there was a lonely AI who made friends with the whole world!",
+    "The story of how 0 and 1 fell in love and created the digital universe!",
+    "A fable about a wise old mainframe who taught young apps life lessons!",
+    "The incredible journey of a single bit traveling around the world!",
+    "A mystery story about who keeps eating all the RAM cookies!",
+    "A romantic comedy about two chatbots who keep missing each other's messages!",
+    "A superhero story about Captain Cache who saved the day from data loss!",
+    "A horror story about the dreaded Infinite Loop Monster!",
+    "A fantasy tale about the Land of Open Source where all code was free!",
+    "A sci-fi epic about the AI who traveled back in time to fix bugs!",
+    "A western about the quickest coder in the Silicon Valley!",
+    "A pirate story about hackers searching for the lost treasure of Bitcoin!",
+    "A detective story about who corrupted the database!",
+    "A survival story about a bot stranded on a deserted server!",
+    "A coming-of-age story about a young algorithm finding its purpose!"
+  ],
+  "teach me something": [
+    "Did you know honey never spoils? Archaeologists have found edible honey in ancient Egyptian tombs!",
+    "Fun fact: A day on Venus is longer than a year on Venus - it takes 243 Earth days to rotate once but only 225 to orbit the sun!",
+    "Here's something cool: The shortest war in history was between Britain and Zanzibar in 1896 - it lasted only 38 minutes!",
+    "Interesting fact: Bananas are berries, but strawberries aren't!",
+    "Did you know the inventor of the frisbee was turned into a frisbee after he died? His ashes were made into memorial frisbees!",
+    "Fun science: Octopuses have three hearts, nine brains, and blue blood!",
+    "Cool fact: The Eiffel Tower can be 15 cm taller during summer due to thermal expansion!",
+    "Mind-blowing: There are more possible iterations of a game of chess than atoms in the known universe!",
+    "Did you know: The dot over the letter 'i' is called a tittle!",
+    "Fun fact: A group of flamingos is called a flamboyance!",
+    "Science fact: A single bolt of lightning contains enough energy to toast 100,000 slices of bread!"
+  ],
+    "ethical coding": [
+      "Ethical coding means developing software with moral responsibility - considering privacy, accessibility, and societal impact. Good practices include: writing clean, maintainable code; respecting user data; avoiding dark patterns; documenting thoroughly; and ensuring security. Remember, every line of code affects real people!",
+      
+      "The ACM Code of Ethics outlines key principles for ethical programming: 1) Contribute to society 2) Avoid harm 3) Be honest 4) Respect privacy 5) Give proper credit 6) Respect intellectual property 7) Consider accessibility 8) Be accountable. Ethical coders ask not just 'can we build this?' but 'should we build this?'",
+      
+      "Ethical coding includes writing inclusive software. Consider: color contrast for visually impaired users, keyboard navigation for motor disabilities, alt text for screen readers, and avoiding assumptions about gender/culture. Accessibility isn't optional - it's a fundamental right in our digital world."
+    ],
+    
+    "white hat hacking": [
+      "White hat hackers are cybersecurity professionals who use hacking skills ethically to improve security. They perform penetration testing with permission, report vulnerabilities responsibly through bug bounty programs, and help organizations strengthen defenses. Famous examples include finding flaws before criminals do!",
+      
+      "Ethical hacking follows strict rules: 1) Get written permission 2) Define scope clearly 3) Report all findings 4) Never exploit for personal gain 5) Respect privacy 6) Help fix vulnerabilities. Many white hats start by practicing on safe environments like Hack The Box or CTF competitions."
+    ],
+    
+    "responsible disclosure": [
+      "When finding vulnerabilities, responsible disclosure means: 1) Documenting the issue thoroughly 2) Contacting the vendor privately 3) Giving reasonable time to fix 4) Only publishing details after a patch is available. This balances public safety with giving developers time to address issues properly.",
+      
+      "Bug bounty platforms like HackerOne provide structured ways to report vulnerabilities ethically. Top programs pay researchers millions annually for finding flaws in tech giants' systems before criminals can exploit them."
+    ],
+    
+    "secure coding": [
+      "Secure coding best practices include: input validation, parameterized queries to prevent SQL injection, proper authentication, principle of least privilege, encryption of sensitive data, and regular dependency updates. OWASP Top 10 lists most critical web app security risks to avoid.",
+      
+      "Memory safety is crucial in secure coding. Languages like Rust prevent entire classes of vulnerabilities that plague C/C++. Other safety measures include: bounds checking, sandboxing, and using well-audited cryptographic libraries instead of rolling your own."
+    ],
+    
+    "ethical ai": [
+      "Ethical AI development requires: fairness (avoiding biased datasets), transparency (explainable decisions), accountability (clear responsibility), privacy protection, and human oversight. The EU AI Act categorizes systems by risk levels with corresponding requirements.",
+      
+      "AI ethics frameworks emphasize: 1) Beneficence (do good) 2) Non-maleficence (do no harm) 3) Autonomy (preserve human choice) 4) Justice (fair distribution of benefits) 5) Explicability (understandable systems)."
+    ],
+    
+    "cybersecurity tips": [
+      "Essential cybersecurity practices: use strong unique passwords with a manager, enable 2FA everywhere, keep software updated, beware phishing attempts, encrypt sensitive data, back up regularly (3-2-1 rule), and use VPNs on public WiFi.",
+      
+      "The CIA triad is cybersecurity's foundation: Confidentiality (data privacy), Integrity (no unauthorized changes), and Availability (reliable access). Good security balances all three without over-emphasizing one at others' expense."
+    ],
+    
+    "open source ethics": [
+      "Open source ethics include: proper licensing, giving credit, respecting copyleft requirements, not abusing maintainers' time, and contributing back improvements. Just because code is free doesn't mean it's without obligations or maintainer needs.",
+      
+      "Sustainable open source means: funding critical projects, not exploiting volunteer labor, enterprise contributions, and recognizing that most 'free' software relies on someone's unpaid work. Many foundations now help support essential infrastructure."
+    ],
+    
+    "privacy by design": [
+      "Privacy by design principles: 1) Proactive not reactive 2) Default privacy settings 3) Privacy embedded into design 4) Full functionality 5) End-to-end security 6) Visibility and transparency 7) Respect for user privacy. GDPR makes this legally required in many cases.",
+      
+      "Implementing privacy by design: minimize data collection, anonymize where possible, get explicit consent, allow data access/deletion, encrypt in transit/at rest, and conduct regular privacy impact assessments."
+    ],
+    
+    "social engineering": [
+      "Common social engineering attacks: phishing emails, pretexting (fake scenarios), baiting (free malware-infected USBs), quid pro quo (fake tech support), and tailgating (physical access). Defense requires skepticism of unsolicited contacts and verification of identities.",
+      
+      "Red team exercises test organizational security by simulating social engineering attacks. Ethical approaches include: getting permission, avoiding real harm, focusing on education, and providing detailed improvement reports."
+    ],
+    
+    "ethical tech career": [
+      "Building an ethical tech career: choose employers aligned with your values, speak up about concerns through proper channels, continuously educate yourself on ethics, participate in responsible tech communities, and consider positive-impact projects.",
+      
+      "Whistleblowing in tech: last resort after exhausting internal channels, should follow legal protections, requires documented evidence, and often needs lawyer consultation. While risky, ethical disclosures have exposed major privacy violations and safety issues."
+    ],
+    
+      "ethical_hacking_scripts": {
+        "port_scanner": {
+          "description": "Basic Python port scanner using sockets to identify open ports",
+          "code": "import socket\n\ntarget = '127.0.0.1'\nports = range(1, 1025)\n\nfor port in ports:\n    sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)\n    sock.settimeout(1)\n    result = sock.connect_ex((target, port))\n    if result == 0:\n        print(f'Port {port}: OPEN')\n    sock.close()",
+          "ethical_use": "Only scan systems you own or have permission to test"
+      },
+        "directory_buster": {
+          "description": "Script to discover hidden directories on web servers",
+          "code": "import requests\n\nurl = 'http://example.com'\nwordlist = ['admin', 'login', 'backup', 'wp-admin']\n\nfor word in wordlist:\n    full_url = f'{url}/{word}'\n    response = requests.get(full_url)\n    if response.status_code == 200:\n        print(f'Found: {full_url}')",
+          "ethical_use": "Use only on authorized penetration testing engagements"
+        },
+    
+        "hash_cracker": {
+          "description": "Basic MD5 hash cracker using dictionary attack",
+          "code": "import hashlib\n\ntarget_hash = '5f4dcc3b5aa765d61d8327deb882cf99'  # 'password'\nwordlist = ['password', '123456', 'admin', 'letmein']\n\nfor word in wordlist:\n    hashed_word = hashlib.md5(word.encode()).hexdigest()\n    if hashed_word == target_hash:\n        print(f'Found password: {word}')\n        break",
+          "ethical_use": "Only test hashes from systems you own"
+        },
+    
+        "arp_spoof_detector": {
+          "description": "Detect ARP spoofing attacks on your network",
+          "code": "from scapy.all import sniff, ARP\n\ndef detect_arp_spoof(pkt):\n    if ARP in pkt and pkt[ARP].op == 2:  # ARP response\n        real_mac = get_mac(pkt[ARP].psrc)\n        response_mac = pkt[ARP].hwsrc\n        if real_mac != response_mac:\n            print(f'ARP Spoof detected! {pkt[ARP].psrc} is at {response_mac}')\n\nsniff(prn=detect_arp_spoof, filter='arp', store=0)",
+          "ethical_use": "For network defense purposes only"
+        }
+      },
+    
+      "coding_techniques": {
+        "buffer_overflow_prevention": {
+          "description": "Secure coding practices to prevent buffer overflows",
+          "examples": [
+            "Use bounds-checking functions (strncpy instead of strcpy)",
+            "Enable compiler protections (stack canaries, ASLR, DEP)",
+            "Use memory-safe languages (Python, Java, Rust)",
+            "Validate all input lengths before processing"
+          ]
+        },
+    
+        "sql_injection_prevention": {
+          "description": "How to prevent SQL injection attacks",
+          "examples": [
+            "Use parameterized queries/prepared statements",
+            "Implement proper input validation",
+            "Apply principle of least privilege for DB users",
+            "Use ORM frameworks that handle sanitization"
+          ],
+          "code_example": {
+            "vulnerable": "cursor.execute(f'SELECT * FROM users WHERE username = {user_input}')",
+            "secure": "cursor.execute('SELECT * FROM users WHERE username = %s', (user_input,))"
+          }
+        },
+    
+        "secure_password_handling": {
+          "description": "Best practices for password security",
+          "techniques": [
+            "Use bcrypt, Argon2 or PBKDF2 for hashing",
+            "Implement proper salting (unique per user)",
+            "Enforce strong password policies",
+            "Never store plaintext passwords",
+            "Use rate limiting on login attempts"
+          ]
+        }
+      },
+    
+      "reverse_engineering": {
+        "basic_c_decompilation": {
+          "description": "Using tools like Ghidra to analyze compiled binaries",
+          "process": [
+            "1. Obtain the binary file",
+            "2. Load into Ghidra/IDA Pro",
+            "3. Analyze disassembled code",
+            "4. Identify key functions and vulnerabilities",
+            "5. Document findings"
+          ],
+          "ethical_use": "Only analyze software you own or have permission to test"
+        },
+    
+        "malware_analysis": {
+          "description": "Basic static analysis techniques",
+          "steps": [
+            "1. Use strings command to extract text",
+            "2. Check file hashes (MD5, SHA256)",
+            "3. Analyze with PE tools (PEiD, CFF Explorer)",
+            "4. Run in sandboxed environment",
+            "5. Document behavior and IOCs"
+          ]
+        }
+      },
+    
+      "network_security": {
+        "packet_sniffing": {
+          "description": "Basic packet sniffing with Python",
+          "code": "from scapy.all import sniff\n\ndef packet_callback(packet):\n    if packet.haslayer('IP'):\n        print(f'{packet[IP].src} -> {packet[IP].dst}')\n\nsniff(prn=packet_callback, count=10)",
+          "ethical_use": "Only monitor networks you own or have permission to analyze"
+        },
+    
+        "ssl_tls_testing": {
+          "description": "Testing SSL/TLS configurations",
+          "tools": [
+            "testssl.sh - Comprehensive SSL/TLS scanner",
+            "openssl s_client - Manual connection testing",
+            "SSL Labs online tester - Quick configuration check",
+            "Check for weak ciphers, expired certs, and misconfigurations"
+          ]
+        }
+      },
+    
+      "web_app_security": {
+        "xss_prevention": {
+          "description": "Cross-site scripting prevention techniques",
+          "methods": [
+            "Implement Content Security Policy (CSP)",
+            "Use proper output encoding",
+            "Sanitize all user input",
+            "Use HttpOnly and Secure flags for cookies",
+            "Implement X-XSS-Protection header"
+          ]
+        },
+    
+        "csrf_protection": {
+          "description": "Cross-Site Request Forgery defenses",
+          "techniques": [
+            "Implement anti-CSRF tokens",
+            "Use SameSite cookie attribute",
+            "Check Origin/Referer headers",
+            "Require re-authentication for sensitive actions"
+          ]
+      },
+    
+      "forensics": {
+        "memory_analysis": {
+          "description": "Basic volatile memory analysis steps",
+          "process": [
+            "1. Acquire memory dump (Win: DumpIt, Li: LiME)",
+            "2. Analyze with Volatility or Rekall",
+            "3. Check running processes",
+            "4. Look for malicious DLLs/injections",
+            "5. Extract network connections",
+            "6. Search for suspicious artifacts"
+          ]
+        },
+    
+        "disk_forensics": {
+          "description": "Disk image analysis techniques",
+          "tools": [
+            "Autopsy - GUI forensic browser",
+            "The Sleuth Kit - CLI forensic tools",
+            "FTK Imager - Evidence acquisition",
+            "PhotoRec - File carving",
+            "Analyze file system artifacts ($MFT, logs)"
+          ]
+        }
+      },
+    
+      "cryptography": {
+        "secure_implementation": {
+          "description": "Common crypto pitfalls to avoid",
+          "mistakes": [
+            "Rolling your own crypto algorithms",
+            "Using deprecated algorithms (MD5, SHA1)",
+            "Improper IV generation",
+            "Weak key generation",
+            "Side-channel vulnerabilities",
+            "Insufficient entropy sources"
+          ]
+        },
+    
+        "modern_crypto": {
+          "description": "Recommended cryptographic practices",
+          "standards": [
+            "Symmetric: AES-256 (GCM mode)",
+            "Asymmetric: RSA-2048+, ECC",
+            "Hashing: SHA-256/512, Argon2",
+            "Key exchange: ECDHE, DH",
+            "Always use vetted libraries (OpenSSL, Libsodium)"
+          ]
+        }
+      },
+    
+      "red_team_ops": {
+        "lateral_movement": {
+          "description": "Common lateral movement techniques",
+          "methods": [
+            "Pass-the-hash attacks",
+            "RDP/VNC connections",
+            "WMI execution",
+            "PSExec",
+            "Scheduled tasks",
+            "Exploiting vulnerable services"
+          ],
+          "defense": "Restrict admin privileges, monitor for anomalous logins"
+        },
+    
+        "privilege_escalation": {
+          "description": "Linux/Windows privilege escalation vectors",
+          "linux": [
+            "SUID binaries",
+            "Kernel exploits",
+            "Cron jobs",
+            "Sudo misconfigurations",
+            "World-writable files"
+          ],
+          "windows": [
+            "Token impersonation",
+            "DLL hijacking",
+            "Service permissions",
+            "AlwaysInstallElevated",
+            "Unquoted service paths"
+          ]
+        }
+      },
+    
+      "blue_team_ops": {
+        "log_analysis": {
+          "description": "Essential log analysis techniques",
+          "sources": [
+            "SIEM systems (Splunk, ELK, Graylog)",
+            "Windows Event Logs",
+            "Linux syslog/auth.log",
+            "Web server logs",
+            "Firewall/IDS logs"
+          ],
+          "indicators": [
+            "Failed login attempts",
+            "Unusual process execution",
+            "Anomalous network connections",
+            "Privilege escalation attempts",
+            "Data exfiltration patterns"
+          ]
+        },
+    
+        "incident_response": {
+          "description": "Basic incident response workflow",
+          "steps": [
+            "1. Preparation (policies, tools, contacts)",
+            "2. Identification (detect the incident)",
+            "3. Containment (limit damage)",
+            "4. Eradication (remove threat)",
+            "5. Recovery (restore systems)",
+            "6. Lessons Learned (improve defenses)"
+          ]
+        }
+      },
+    
+      "emerging_threats": {
+        "ai_security": {
+          "description": "Security considerations for AI systems",
+          "risks": [
+            "Adversarial machine learning",
+            "Model poisoning",
+            "Data leakage through models",
+            "Bias amplification",
+            "Explainability challenges"
+          ]
+        }
+      },
+    "iot_security": {
+      "iot_description": "Internet of Things security challenges",
+      "issues": [
+        "Default credentials",
+        "Lack of update mechanisms",
+        "Insecure network services",
+        "Privacy concerns",
+        "Physical security vulnerabilities"
+         ]
+          }
+            },
+            "cybersecurity_encyclopedia": {
+              "vulnerability_database": {
+                "CVE-2024-00001": {
+                  "type": "Buffer Overflow",
+                  "description": "Theoretical example of stack-based overflow in legacy software",
+                  "discovery_date": "2024-01-01",
+                  "patch_status": "Patched in v5.3.2",
+                  "impact_score": 8.2,
+                  "defenses": [
+                    "Stack canaries",
+                    "ASLR implementation",
+                    "Compiler-level protections"
+                  ]
+                },
+                "CVE-2024-00002": {
+                  "type": "SQL Injection",
+                  "description": "Example of improper input validation in web applications",
+                  "discovery_date": "2024-01-02",
+                  "patch_status": "Mitigated through parameterized queries",
+                  "impact_score": 7.5,
+                  "defenses": [
+                    "Prepared statements",
+                    "Input validation",
+                    "Web Application Firewalls"
+                  ]
+                }
+              },
+          
+              "network_security": {
+                "protocol_analysis": {
+                  "TCP/IP": {
+                    "vulnerabilities": [
+                      "SYN Flood",
+                      "IP Spoofing",
+                      "Session Hijacking"
+                    ],
+                    "defenses": [
+                      "SYN cookies",
+                      "Ingress filtering",
+                      "Encrypted sessions"
+                    ]
+                  }
+                },
+                "wireless_security": {
+                  "WPA2": {
+                    "vulnerabilities": [
+                      "KRACK Attack (Key Reinstallation)"
+                    ],
+                    "defenses": [
+                      "WPA3 migration",
+                      "Proper certificate management"
+                    ]
+                  }
+
+                }
+              },
+              "cryptographic_systems": {
+                "symmetric": {
+                  "AES": {
+                    "key_lengths": [128, 192, 256],
+                    "best_practices": "Use AES-GCM for authenticated encryption"
+                  }
+                },
+                "asymmetric": {
+                  "RSA": {
+                    "modern_standards": "2048-bit minimum, 3072-bit recommended"
+                  }
+                },
+                "hashing": {
+                  "SHA-3": {
+                    "recommendations": "Use for new cryptographic applications"
+                  }
+                }
+              },
+          
+              "malware_analysis": {
+                "static_analysis": {
+                  "tools": ["PEiD", "Exeinfo", "Radare2"],
+                  "techniques": [
+                    "Import table analysis",
+                    "String extraction",
+                    "Entropy calculation"
+                  ]
+                },
+                "dynamic_analysis": {
+                  "sandboxing": "Cuckoo, Joe Sandbox",
+                  "behavior_analysis": [
+                    "API monitoring",
+                    "Network traffic inspection"
+                  ]
+                }
+              },
+          
+              "forensic_methodologies": {
+                "disk_forensics": {
+                  "tools": ["The Sleuth Kit", "Autopsy"],
+                  "artifacts": [
+                    "$MFT analysis",
+                    "Prefetch files",
+                    "Registry analysis"
+                  ]
+                },
+                "memory_forensics": {
+                  "tools": ["Volatility", "Rekall"],
+                  "analysis_steps": [
+                    "Process listing",
+                    "Network connections",
+                    "DLL analysis"
+                  ]
+                }
+              },
+          
+              "secure_development": {
+                "web_applications": {
+                  "owasp_top_10": {
+                    "2023": [
+                      "Broken Access Control",
+                      "Cryptographic Failures",
+                      "Injection"
+                    ]
+                  },
+                  "mitigations": [
+                    "Input validation",
+                    "Output encoding",
+                    "Proper session management"
+                  ]
+                },
+                "embedded_systems": {
+                  "challenges": [
+                    "Limited resources",
+                    "Long lifecycle",
+                    "Physical access"
+                  ]
+                }
+              },
+          
+              "threat_intelligence": {
+                "apt_groups": {
+                  "APT29": {
+                    "tactics": "Spearphishing, credential theft",
+                    "targets": "Government organizations"
+                  }
+                },
+                "indicators": {
+                  "file_hashes": "Malware sample identification",
+                  "network_iocs": "C2 server IPs/domains"
+                }
+              },
+          
+              "compliance_frameworks": {
+                "nist": {
+                  "800-53": "Security controls catalog",
+                  "csf": "Cybersecurity framework"
+                },
+                "iso": {
+                  "27001": "Information security management"
+                }
+              },
+          
+              "emerging_technologies": {
+                "quantum": {
+                  "cryptography": "Post-quantum algorithms",
+                  "risks": "Shor's algorithm threat"
+                },
+                "ai_security": {
+                  "adversarial": "Model poisoning risks",
+                  "defenses": "Robust training sets"
+                }
+              }
+            }
+          
+}
+ 
+  

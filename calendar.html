@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joy Funds | Growth Calculator</title>
+    <style>
+        * { box-sizing: border-box; }
+        :root {
+            color-scheme: light;
+            font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            color: #172033;
+            background: #f4f7fc;
+        }
+        body { margin: 0; min-height: 100vh; background: radial-gradient(circle at 85% 0%, #e0edff 0, transparent 34%), #f4f7fc; }
+        .container { width: min(1040px, 92%); margin: 0 auto; }
+        header { background: #101a32; color: #fff; box-shadow: 0 8px 26px rgba(16, 26, 50, .14); }
+        .nav { display: flex; align-items: center; justify-content: space-between; min-height: 76px; gap: 16px; }
+        .brand { font-size: 1.45rem; font-weight: 800; letter-spacing: -.04em; }
+        .home-link { display: inline-flex; align-items: center; justify-content: center; padding: 10px 18px; border-radius: 10px; background: #f4b840; color: #172033; font-weight: 800; text-decoration: none; }
+        .home-link:hover { background: #ffca5a; }
+        main { padding: 56px 0 72px; }
+        .intro { max-width: 720px; margin: 0 auto 28px; text-align: center; }
+        .eyebrow { color: #3157a4; font-size: .76rem; font-weight: 850; letter-spacing: .14em; text-transform: uppercase; }
+        h1 { margin: 10px 0 12px; font-size: clamp(2rem, 5vw, 3.25rem); line-height: 1.08; letter-spacing: -.055em; }
+        .intro p { margin: 0; color: #63708a; font-size: 1.05rem; line-height: 1.65; }
+        .calculator { display: grid; grid-template-columns: minmax(0, 1fr) minmax(280px, .9fr); gap: 22px; align-items: stretch; }
+        .card { padding: clamp(22px, 4vw, 34px); border: 1px solid #e1e8f3; border-radius: 22px; background: #fff; box-shadow: 0 20px 48px rgba(30, 49, 86, .08); }
+        .calculator > .card { min-width: 0; }
+        .card h2 { margin: 0 0 8px; font-size: 1.2rem; letter-spacing: -.025em; }
+        .muted { color: #68758c; line-height: 1.55; }
+        label { display: block; margin: 22px 0 8px; font-weight: 750; }
+        .input-wrap { display: flex; align-items: center; overflow: hidden; border: 1px solid #cad5e5; border-radius: 12px; background: #fff; }
+        .currency { padding-left: 15px; color: #68758c; font-weight: 800; }
+        input { width: 100%; min-width: 0; padding: 14px 12px; border: 0; outline: 0; color: #172033; font: inherit; font-size: 1.1rem; font-weight: 700; }
+        .input-wrap:focus-within { border-color: #3157a4; box-shadow: 0 0 0 3px rgba(49, 87, 164, .13); }
+        .result-card { display: flex; flex-direction: column; justify-content: center; color: #fff; background: linear-gradient(145deg, #14284c, #244d89); border: 0; }
+        .result-card .muted { color: #d3def2; }
+        .result-label { color: #cfdbef; font-size: .8rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
+        .result-value { margin: 10px 0 4px; font-size: clamp(2.3rem, 6vw, 3.5rem); font-weight: 850; letter-spacing: -.06em; overflow-wrap: anywhere; }
+        .result-caption { margin: 0; color: #d3def2; }
+        .formula { margin-top: 22px; padding-top: 18px; border-top: 1px solid rgba(255,255,255,.2); color: #e3ebf8; font-size: .92rem; line-height: 1.6; }
+        .examples { margin-top: 24px; }
+        .examples h2 { margin-bottom: 4px; }
+        .table-wrap { max-width: 100%; margin-top: 14px; overflow-x: auto; border: 1px solid #e1e8f3; border-radius: 14px; }
+        table { width: 100%; border-collapse: collapse; min-width: 420px; }
+        th, td { padding: 13px 15px; text-align: left; border-bottom: 1px solid #e9eef6; }
+        th { background: #f7f9fd; color: #53627d; font-size: .78rem; letter-spacing: .06em; text-transform: uppercase; }
+        tr:last-child td { border-bottom: 0; }
+        .notice { margin: 22px 0 0; padding: 15px 17px; border: 1px solid #f1d28c; border-radius: 12px; background: #fff9e9; color: #75510a; font-size: .9rem; line-height: 1.55; }
+        footer { padding: 20px 0; color: #68758c; text-align: center; font-size: .88rem; }
+        @media (max-width: 680px) {
+            .nav { min-height: 68px; }
+            main { padding: 38px 0 52px; }
+            .calculator { grid-template-columns: 1fr; }
+            .intro { text-align: left; }
+        }
+        @media (max-width: 380px) {
+            .brand { font-size: 1.2rem; }
+            .home-link { padding: 9px 13px; }
+            .card { border-radius: 17px; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container nav">
+            <div class="brand">Joy Funds</div>
+            <a class="home-link" href="index.html">Home</a>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="intro">
+            <span class="eyebrow">Illustrative calculator</span>
+            <h1>Explore a two-day growth scenario</h1>
+            <p>Enter an amount to see the result of applying a one-time 2× calculation over two days.</p>
+        </section>
+
+        <section class="calculator" aria-label="Illustrative two-day growth calculator">
+            <div class="card">
+                <h2>Choose an amount</h2>
+                <p class="muted">The estimate uses the same starting amount and a single doubling calculation.</p>
+                <label for="principal">Starting amount in naira</label>
+                <div class="input-wrap">
+                    <span class="currency" aria-hidden="true">₦</span>
+                    <input id="principal" type="number" min="1" max="100000000" step="1" value="5000" inputmode="numeric" aria-describedby="calculationHint">
+                </div>
+                <p class="muted" id="calculationHint">The result updates as you change the amount.</p>
+
+                <div class="examples">
+                    <h2>Example amounts</h2>
+                    <p class="muted">Illustrations assume one 2× calculation after two days.</p>
+                    <div class="table-wrap">
+                        <table>
+                            <thead><tr><th>Starting amount</th><th>Illustrative amount</th></tr></thead>
+                            <tbody>
+                                <tr><td>₦5,000</td><td>₦10,000</td></tr>
+                                <tr><td>₦10,000</td><td>₦20,000</td></tr>
+                                <tr><td>₦25,000</td><td>₦50,000</td></tr>
+                                <tr><td>₦50,000</td><td>₦100,000</td></tr>
+                                <tr><td>₦100,000</td><td>₦200,000</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card result-card" aria-live="polite">
+                <span class="result-label">Illustrative amount after two days</span>
+                <output class="result-value" id="projectedAmount" for="principal">₦10,000</output>
+                <p class="result-caption">Starting amount: <strong id="startingAmount">₦5,000</strong></p>
+                <p class="formula">Calculation: starting amount × 2, applied once. This example does not compound repeatedly after the two-day period.</p>
+            </div>
+        </section>
+
+   </main>
+
+    <footer>&copy; 2026 Joy Funds</footer>
+    <script>
+        const principalInput = document.getElementById('principal');
+        const projectedOutput = document.getElementById('projectedAmount');
+        const startingOutput = document.getElementById('startingAmount');
+        const naira = new Intl.NumberFormat('en-NG', { maximumFractionDigits: 0 });
+
+        function updateProjection() {
+            const amount = Number(principalInput.value);
+            if (!Number.isSafeInteger(amount) || amount < 1 || amount > 100000000) {
+                projectedOutput.textContent = 'Enter a valid amount';
+                startingOutput.textContent = '—';
+                return;
+            }
+            startingOutput.textContent = '₦' + naira.format(amount);
+            projectedOutput.textContent = '₦' + naira.format(amount * 2);
+        }
+
+        principalInput.addEventListener('input', updateProjection);
+    </script>
+</body>
+</html>

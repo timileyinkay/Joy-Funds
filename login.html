@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Joy Funds | Login</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="auth-shell">
+    <div class="auth-card">
+      <h1>Login</h1>
+      <form class="auth-form" onsubmit="event.preventDefault(); loginUser();">
+        <div class="field-group">
+          <label for="email">Email</label>
+          <input id="email" class="input" type="email" placeholder="you@example.com">
+        </div>
+        <div class="field-group">
+          <label for="password">Password</label>
+          <input id="password" class="input" type="password" placeholder="Enter your password">
+        </div>
+        <button type="submit" class="btn btn-primary">Sign In</button>
+      </form>
+
+      <div class="flash-msg" id="message"></div>
+
+      <div class="auth-meta">
+        Don’t have an account? <a href="signup.html">Create one</a>
+      </div>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

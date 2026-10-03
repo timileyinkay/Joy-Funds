@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Joy Funds | Admin Login</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="auth-shell">
+    <div class="auth-card">
+      <h1>Admin Portal</h1>
+      <form class="auth-form" onsubmit="event.preventDefault(); loginAdmin();">
+        <div class="field-group">
+          <label for="adminEmail">Admin email</label>
+          <input id="adminEmail" class="input" type="email" placeholder="admin@joyfunds.com">
+        </div>
+        <div class="field-group">
+          <label for="adminPassword">Password</label>
+          <input id="adminPassword" class="input" type="password" placeholder="Enter admin password">
+        </div>
+        <button type="submit" class="btn btn-primary">Login as admin</button>
+      </form>
+
+      <div class="flash-msg" id="message"></div>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

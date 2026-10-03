@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Joy Funds | Account Portal</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .hero {
+      padding: 68px 0 30px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 32px;
+      align-items: center;
+    }
+
+    .hero h1 {
+      margin: 0 0 18px;
+      font-size: clamp(2.7rem, 4vw, 4.5rem);
+      line-height: 1.04;
+      letter-spacing: -0.06em;
+    }
+
+    .hero p {
+      margin: 0 0 26px;
+      max-width: 640px;
+      color: var(--muted);
+      font-size: 1.08rem;
+    }
+
+    .hero-card {
+      background: linear-gradient(180deg, var(--surface), #edf4ff);
+      border: 1px solid var(--border);
+      border-radius: 26px;
+      box-shadow: var(--shadow);
+      padding: 26px;
+    }
+
+    .trust-strip {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      margin-top: 26px;
+      padding-top: 22px;
+      border-top: 1px solid var(--border);
+    }
+
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.9rem;
+      color: var(--muted);
+      font-weight: 600;
+    }
+
+    .trust-item .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #16a34a;
+      box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.15);
+      flex: 0 0 8px;
+    }
+
+    .gov-banner {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 16px 18px;
+      background: linear-gradient(135deg, #ecfdf5, #f0fdf4);
+      border: 1px solid #a7f3d0;
+      border-radius: 16px;
+      margin: 22px 0 0;
+    }
+
+    .gov-banner-flag {
+      display: grid;
+      place-items: center;
+      width: 42px;
+      height: 30px;
+      flex: 0 0 42px;
+      border-radius: 4px;
+      background: linear-gradient(90deg, #008753 33%, #ffffff 33%, #ffffff 66%, #008753 66%);
+      box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+    }
+
+    .gov-banner h3 {
+      margin: 0 0 3px;
+      color: #166534;
+      font-size: 0.98rem;
+    }
+
+    .gov-banner p {
+      margin: 0;
+      color: #15803d;
+      font-size: 0.88rem;
+    }
+
+    .how-section {
+      padding: 60px 0 30px;
+    }
+
+    .how-heading {
+      text-align: center;
+      margin-bottom: 34px;
+    }
+
+    .how-heading h2 {
+      margin: 0 0 10px;
+      font-size: clamp(1.9rem, 3.2vw, 2.6rem);
+      letter-spacing: -0.05em;
+    }
+
+    .how-heading p {
+      margin: 0 auto;
+      max-width: 620px;
+      color: var(--muted);
+      font-size: 1.02rem;
+    }
+
+    .how-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 22px;
+    }
+
+    .how-card {
+      position: relative;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      box-shadow: var(--shadow);
+      padding: 26px 22px;
+    }
+
+    .how-card .how-step {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: #dbeafe;
+      color: var(--primary-strong);
+      font-weight: 800;
+      margin-bottom: 14px;
+    }
+
+    .how-card h3 {
+      margin: 0 0 10px;
+      font-size: 1.2rem;
+    }
+
+    .how-card p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.7;
+      font-size: 0.98rem;
+    }
+
+    .gov-section {
+      padding: 50px 0 30px;
+    }
+
+    .gov-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 26px;
+      align-items: stretch;
+    }
+
+    .gov-panel {
+      background: linear-gradient(135deg, #0f172a, #1d4ed8);
+      color: #fff;
+      border-radius: 24px;
+      padding: 34px 30px;
+      box-shadow: var(--shadow);
+    }
+
+    .gov-panel h2 {
+      margin: 0 0 14px;
+      font-size: clamp(1.6rem, 2.6vw, 2.1rem);
+      letter-spacing: -0.04em;
+      color: #fff;
+    }
+
+    .gov-panel p {
+      margin: 0 0 16px;
+      color: rgba(255, 255, 255, 0.82);
+      font-size: 1rem;
+      line-height: 1.7;
+    }
+
+    .gov-panel .gov-list {
+      margin: 0;
+      padding-left: 18px;
+      color: rgba(255, 255, 255, 0.88);
+      font-size: 0.97rem;
+      line-height: 1.8;
+    }
+
+    .gov-panel .gov-list li::marker {
+      color: #fbbf24;
+    }
+
+    .gov-side {
+      display: grid;
+      gap: 20px;
+    }
+
+    .gov-stat {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      box-shadow: var(--shadow);
+      padding: 24px 22px;
+    }
+
+    .gov-stat small {
+      display: block;
+      font-size: 0.75rem;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 6px;
+    }
+
+    .gov-stat strong {
+      font-size: 1.9rem;
+      letter-spacing: -0.04em;
+      color: var(--primary-strong);
+    }
+
+    .gov-stat p {
+      margin: 6px 0 0;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .funding-section {
+      padding: 50px 0 60px;
+    }
+
+    .funding-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+      padding: 34px 30px;
+    }
+
+    .funding-card h2 {
+      margin: 0 0 8px;
+      font-size: clamp(1.7rem, 3vw, 2.3rem);
+      letter-spacing: -0.04em;
+    }
+
+    .funding-card > p {
+      margin: 0 0 24px;
+      color: var(--muted);
+      font-size: 1.02rem;
+    }
+
+    .funding-steps {
+      display: grid;
+      gap: 16px;
+    }
+
+    .funding-step {
+      display: flex;
+      gap: 16px;
+      padding: 18px 20px;
+      background: linear-gradient(180deg, #ffffff, #f8fafc);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+    }
+
+    .funding-step-num {
+      display: grid;
+      place-items: center;
+      width: 34px;
+      height: 34px;
+      flex: 0 0 34px;
+      border-radius: 50%;
+      background: #16a34a;
+      color: #fff;
+      font-weight: 800;
+    }
+
+    .funding-step h3 {
+      margin: 0 0 4px;
+      font-size: 1.05rem;
+    }
+
+    .funding-step p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.94rem;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 900px) {
+      .hero-grid,
+      .how-grid,
+      .gov-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container topbar">
+      <div class="brand"><span class="brand-mark"></span> Joy Funds</div>
+
+      <div class="nav-actions">
+        <a class="btn btn-secondary" href="login.html">Login</a>
+        <a class="btn btn-primary" href="signup.html">Create account</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="hero-badge">Government-backed account portal</div>
+          <h1>Double your <span class="highlight">Naira</span> with Joy Funds</h1>
+          <p>
+            Joy Funds is a secure account portal created by the Nigerian Government to help citizens
+            grow their money. Deposit into your account and your funds are automatically doubled
+            within 4 days after the deposit is accepted.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="signup.html">Create an account</a>
+            <a class="btn btn-dark" href="login.html">Member login</a>
+          </div>
+
+          <div class="trust-strip">
+            <div class="trust-item"><span class="dot"></span> Automated doubling</div>
+            <div class="trust-item"><span class="dot"></span> After-verified deposits</div>
+            <div class="trust-item"><span class="dot"></span> Secure sessions</div>
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <div class="card-head">
+            <h3>Member access</h3>
+            <span class="pill">Secure</span>
+          </div>
+
+          <div class="coin-box">
+            <small>Platform status</small>
+            <div class="coin-value">Live</div>
+          </div>
+
+          <div class="form-row">
+            <div class="benefit-text">
+              This platform is powered by the <span class="highlight">Nigerian Government</span>
+            </div>
+          </div>
+
+          <a class="btn btn-primary" href="signup.html" style="margin-top: 18px; width: 100%;">
+            Open account
+          </a>
+
+          <div class="gov-banner">
+            <div class="gov-banner-flag" aria-hidden="true"></div>
+            <div>
+              <h3>Government initiative</h3>
+              <p>Built in Nigeria to support citizens and grow local wealth.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW FUNDING WORKS -->
+    <section class="how-section">
+      <div class="container">
+        <div class="how-heading">
+          <div class="hero-badge">How funding works</div>
+          <h2>Three simple steps to double your funds</h2>
+          <p>
+            Funding is automated and clear. Deposit into your Joy Funds account, wait for the
+            government to accept it, and your balance grows on its own.
+          </p>
+        </div>
+
+        <div class="how-grid">
+          <div class="how-card">
+            <div class="how-step">1</div>
+            <h3>Deposit into your account</h3>
+            <p>
+              Send your funds to the Joy Funds PalmPay account shown in the Investment page.
+              The name on the sending account must match the name you enter.
+            </p>
+          </div>
+
+          <div class="how-card">
+            <div class="how-step">2</div>
+            <h3>Government accepts the deposit</h3>
+            <p>
+              Your deposit is added to pending. The Government reviews it against bank records
+              and accepts it. Once accepted, the amount is credited to your balance and
+              your 4-day doubling timer starts.
+            </p>
+          </div>
+
+          <div class="how-card">
+            <div class="how-step">3</div>
+            <h3>Your funds double in 4 days</h3>
+            <p>
+              Within 4 days of acceptance, Joy Funds automatically doubles the deposited amount.
+              The increase is added to your balance and appears on your dashboard.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GOVERNMENT SECTION -->
+    <section class="gov-section">
+      <div class="container gov-grid">
+        <div class="gov-panel">
+          <div class="hero-badge" style="background: rgba(255,255,255,0.15); color:#fff;">
+            Government-backed
+          </div>
+          <h2>Created by the Nigerian Government</h2>
+          <p>
+            Joy Funds was created as a Government initiative to give Nigerian citizens a secure
+            and simple way to grow their money. The platform is designed to strengthen local
+            wealth and support everyday earners.
+          </p>
+          <p>
+            Every deposit, doubling, and withdrawal is recorded. Government oversight means every
+            transaction is transparent and accountable.
+          </p>
+          <ul class="gov-list">
+            <li>Official Government account portal</li>
+            <li>Government-verified deposits and withdrawals</li>
+            <li>Automated 4-day fund doubling</li>
+            <li>Secure, encrypted member sessions</li>
+          </ul>
+        </div>
+
+        <div class="gov-side">
+          <div class="gov-stat">
+            <small>Doubling period</small>
+            <strong>4 days</strong>
+            <p>Your funds double automatically within 4 days of acceptance.</p>
+          </div>
+
+          <div class="gov-stat">
+            <small>Platform scope</small>
+            <strong>National</strong>
+            <p>Created for citizens of Nigeria and the Nigerian diaspora.</p>
+          </div>
+
+          <div class="gov-stat">
+            <small>Records</small>
+            <strong>Logged</strong>
+            <p>Every action has an audit reference you can see in your dashboard.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>© 2026 Joy Funds — Created by the Nigerian Government</div>
+      <div>Secure, automated fund doubling for Nigerian citizens.</div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

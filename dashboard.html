@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Joy Funds | Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .doubling-banner {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin: 22px 0 38px;
+      padding: 19px 21px;
+      background: linear-gradient(135deg, #ecfdf5, #f0fdf4);
+      border: 1px solid #a7f3d0;
+      border-radius: 16px;
+    }
+
+    .doubling-banner-icon {
+      display: grid;
+      place-items: center;
+      width: 34px;
+      height: 34px;
+      flex: 0 0 34px;
+      color: #fff;
+      background: #16a34a;
+      border-radius: 50%;
+      font-weight: 800;
+      font-size: 1.1rem;
+    }
+
+    .doubling-banner h2 {
+      margin: 0 0 4px;
+      color: #166534;
+      font-size: 1rem;
+    }
+
+    .doubling-banner p {
+      margin: 0;
+      color: #15803d;
+      font-size: 0.92rem;
+    }
+
+    .kpi-card .kpi-sub {
+      margin: 6px 0 0;
+      font-size: 0.88rem;
+      color: var(--muted);
+    }
+
+    .account-balance-card .kpi-sub {
+      color: rgba(255, 255, 255, 0.8);
+    }
+
+    .pending-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: #fef3c7;
+      color: #92400e;
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+    }
+
+    .status-doubled {
+      color: #166534;
+      font-weight: 700;
+    }
+
+    .status-pending {
+      color: #92400e;
+      font-weight: 700;
+    }
+
+    .amount-increase {
+      color: #16a34a;
+      font-weight: 800;
+    }
+
+    .transaction-credit {
+      color: #15803d;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .transaction-debit {
+      color: #b91c1c;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .account-detail-card p,
+    .account-heading p,
+    .account-summary h3 {
+      min-width: 0;
+      overflow-wrap: anywhere;
+    }
+
+    .account-section {
+      max-width: 1120px;
+      margin: 0 auto;
+    }
+
+    .account-heading {
+      padding: 10px 0 2px;
+    }
+
+    .account-summary {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      align-items: stretch;
+      gap: 18px;
+      margin-bottom: 24px;
+    }
+
+    .account-summary .dashboard-card {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      min-height: 170px;
+      border-radius: 20px;
+    }
+
+    .account-summary .account-balance-card {
+      grid-column: span 1;
+      box-shadow: 0 18px 36px rgba(29, 78, 216, 0.2);
+    }
+
+    .private-inbox-card {
+      margin: 26px 0;
+      padding: 22px 24px;
+      border-radius: 20px;
+      background: #fff;
+      border: 1px solid var(--border);
+      box-shadow: 0 12px 32px rgba(15, 23, 42, 0.055);
+    }
+
+    .private-inbox-card h2 {
+      margin: 4px 0 14px;
+      font-size: 1.35rem;
+      letter-spacing: -0.03em;
+    }
+
+    .private-message-list {
+      display: grid;
+      gap: 10px;
+    }
+
+    .private-message-item {
+      padding: 14px 16px;
+      border: 1px solid #dbeafe;
+      border-left: 4px solid var(--primary);
+      border-radius: 12px;
+      background: #f8fbff;
+      overflow-wrap: anywhere;
+      white-space: pre-wrap;
+    }
+
+    .private-message-item small {
+      display: block;
+      margin: 3px 0 8px;
+      color: var(--muted);
+    }
+
+    .history-section + .history-section {
+      margin-top: 34px;
+    }
+
+    .history-section .account-activity-heading {
+      margin-bottom: 12px;
+    }
+
+    .history-section .table-wrap {
+      margin-top: 0;
+    }
+
+    .account-table-wrap {
+      box-shadow: 0 10px 28px rgba(15, 23, 42, 0.045);
+    }
+
+    @media (max-width: 980px) {
+      .account-summary {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 600px) {
+      .account-summary {
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+
+      .account-summary .dashboard-card {
+        min-height: 132px;
+        padding: 20px;
+      }
+
+      .private-inbox-card {
+        margin: 20px 0;
+        padding: 18px 16px;
+      }
+
+      .doubling-banner {
+        align-items: flex-start;
+        margin: 20px 0 28px;
+        padding: 16px;
+      }
+
+      .account-activity-heading {
+        gap: 8px;
+      }
+
+      .account-activity-note {
+        white-space: normal;
+      }
+
+      .history-section + .history-section {
+        margin-top: 28px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container topbar">
+      <div class="brand"><span class="brand-mark"></span> Joy Funds</div>
+      <nav class="nav-links">
+        <a href="calendar.html">Calendar</a>
+        <a href="investment.html">Investment</a>
+        <a href="withdrawal.html">Withdrawal</a>
+        <a href="dashboard.html">Dashboard</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="btn btn-secondary" type="button" onclick="logoutUser()">Logout</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container page-shell account-page">
+    <section class="section account-section">
+      <div class="account-heading">
+        <div>
+          <span class="account-eyebrow">PERSONAL ACCOUNT</span>
+          <h1>Your account overview</h1>
+          <p>Welcome back, <span id="userName">Loading profile…</span>. Here are your account details.</p>
+        </div>
+        <span class="account-state"><span class="account-state-dot"></span> Account active</span>
+      </div>
+
+      <div class="dashboard-grid account-summary">
+        <div class="kpi-card dashboard-card account-balance-card">
+          <span class="tag">AVAILABLE BALANCE</span>
+          <h3 id="accountBalance">Loading…</h3>
+          <p class="kpi-sub">Funds double automatically within 4 days of funding.</p>
+        </div>
+
+        <div class="kpi-card dashboard-card account-detail-card">
+          <span class="tag">PENDING 4-DAY GROWTH</span>
+          <h3 id="pendingDoubling">₦0</h3>
+          <p class="kpi-sub" id="pendingDoublingDetail">No accepted deposits are waiting for 4-day growth.</p>
+        </div>
+
+        <div class="kpi-card dashboard-card account-detail-card">
+          <span class="tag">ACCOUNT HOLDER</span>
+          <h3 id="profileName">Loading…</h3>
+          <p id="profileEmail">Loading account details…</p>
+        </div>
+
+        <div class="kpi-card dashboard-card account-detail-card">
+          <span class="tag">MEMBER SINCE</span>
+          <h3 id="profileCreated">Loading…</h3>
+          <p>Account registration date</p>
+        </div>
+      </div>
+
+      <div class="action-row" aria-label="Action buttons">
+        <a class="btn btn-invest" href="investment.html">💰 Invest Now</a>
+        <a class="btn btn-outline" href="withdrawal.html">Request Withdrawal</a>
+      </div>
+
+      <section class="private-inbox-card" aria-labelledby="privateMessagesHeading">
+        <span class="account-eyebrow">PRIVATE ACCOUNT MESSAGES</span>
+        <h2 id="privateMessagesHeading">Messages from admin</h2>
+        <div id="privateMessages" class="private-message-list" aria-live="polite">
+          <p class="kpi-sub">Loading your private messages…</p>
+        </div>
+      </section>
+
+      <div class="doubling-banner" role="status">
+        <span class="doubling-banner-icon" aria-hidden="true">2x</span>
+        <div>
+          <h2>Your funds double automatically within 4 days</h2>
+          <p>After your deposit is reviewed and accepted, the 4-day growth period begins automatically.</p>
+        </div>
+      </div>
+
+      <section class="history-section" aria-labelledby="pendingRequestsHeading">
+        <div class="account-activity-heading">
+          <div>
+            <span class="account-eyebrow">ACCOUNT HISTORY</span>
+            <h2 id="pendingRequestsHeading">Pending requests</h2>
+          </div>
+          <span class="account-activity-note">Only requests awaiting review appear here</span>
+        </div>
+
+        <div class="table-wrap account-table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Activity</th>
+                <th>Amount</th>
+                <th>Increase</th>
+                <th>Date</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody id="accountActivity">
+              <tr><td colspan="5">Loading account activity…</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="history-section" aria-labelledby="transactionHistoryHeading">
+        <div class="account-activity-heading">
+          <div>
+            <span class="account-eyebrow">ACCOUNT HISTORY</span>
+            <h2 id="transactionHistoryHeading">Transaction history</h2>
+          </div>
+          <span class="account-activity-note">Completed and pending transactions</span>
+        </div>
+
+        <div class="table-wrap account-table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Transaction</th>
+                <th>Amount</th>
+                <th>Date</th>
+                <th>Status</th>
+                <th>Reference / note</th>
+              </tr>
+            </thead>
+            <tbody id="transactionHistory">
+              <tr><td colspan="5">Loading transaction history…</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+      <p id="profileError" class="flash-msg" role="alert"></p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>© 2026 Joy Funds</div>
+      <div>Automated fund doubling. Secure. Fast. Transparent.</div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    // ---------------------------------------------------------------
+    // Dashboard renderer
+    // Expects /api/me to return a profile like:
+    // {
+    //   full_name, email, created_at, balance_ngn,
+    //   pending_doubling_ngn, pending_doubling,
+    //   activity: [
+    //     { type, amount_ngn, increase_ngn, date, status, doubled }
+    //   ], transactions: [{ type, amount_ngn, date, status, reference, note }]
+    // }
+    // ---------------------------------------------------------------
+
+    function formatNaira(value) {
+      const n = Number(value || 0);
+      return '₦' + n.toLocaleString('en-NG', { maximumFractionDigits: 0 });
+    }
+
+    function statusClass(status) {
+      if (!status) return '';
+      const s = String(status).toLowerCase();
+      if (s.includes('doubled') || s.includes('completed') || s.includes('paid')) return 'status-doubled';
+      if (s.includes('pending') || s.includes('processing')) return 'status-pending';
+      return '';
+    }
+
+    function escapeDashboardHtml(value) {
+      return String(value ?? '').replace(/[&<>"']/g, character => ({
+        '&': '&amp;',
+        '<': '&lt;',
+        '>': '&gt;',
+        '"': '&quot;',
+        "'": '&#39;'
+      })[character]);
+    }
+
+    function renderTransactions(transactions) {
+      const tbody = document.getElementById('transactionHistory');
+      if (!transactions || transactions.length === 0) {
+        tbody.innerHTML = '<tr><td colspan="5">No transactions recorded yet.</td></tr>';
+        return;
+      }
+
+      tbody.innerHTML = transactions.map(item => {
+        const amount = Number(item.amount_ngn || 0);
+        const amountLabel = amount < 0
+          ? '−' + formatNaira(Math.abs(amount))
+          : '+' + formatNaira(amount);
+        const amountClass = amount < 0 ? 'transaction-debit' : 'transaction-credit';
+        const reference = item.reference || item.note || '—';
+        return `
+          <tr>
+            <td>${escapeDashboardHtml(item.type || 'Transaction')}</td>
+            <td class="${amountClass}">${amountLabel}</td>
+            <td>${escapeDashboardHtml(item.date || '—')}</td>
+            <td class="${statusClass(item.status)}">${escapeDashboardHtml(item.status || 'Completed')}</td>
+            <td>${escapeDashboardHtml(reference)}</td>
+          </tr>
+        `;
+      }).join('');
+    }
+
+    function renderActivity(activity) {
+      const tbody = document.getElementById('accountActivity');
+      if (!activity || activity.length === 0) {
+        tbody.innerHTML = '<tr><td colspan="5">No activity yet. Make a deposit to start your 4-day growth.</td></tr>';
+        return;
+      }
+
+      tbody.innerHTML = activity.map(item => {
+        const amount = item.amount_ngn ?? item.amount ?? 0;
+        const increase = item.increase_ngn ?? (item.doubled ? amount : 0);
+        const date = item.date || '—';
+        const status = item.status || (item.doubled ? 'Doubled' : 'Pending 4-day growth');
+
+        return `
+          <tr>
+            <td>${escapeDashboardHtml(item.type || 'Deposit')}</td>
+            <td>${formatNaira(amount)}</td>
+            <td>${increase ? '<span class="amount-increase">+' + formatNaira(increase) + '</span>' : '—'}</td>
+            <td>${escapeDashboardHtml(date)}</td>
+            <td class="${statusClass(status)}">${escapeDashboardHtml(status)}</td>
+          </tr>
+        `;
+      }).join('');
+    }
+
+    function renderPrivateMessages(messages) {
+      const container = document.getElementById('privateMessages');
+      if (!messages || messages.length === 0) {
+        container.innerHTML = '<p class="kpi-sub">You have no private messages.</p>';
+        return;
+      }
+
+      container.innerHTML = messages.slice().reverse().map(message => {
+        const sentAt = message.sent_at ? new Date(message.sent_at).toLocaleString('en-NG', { dateStyle: 'medium', timeStyle: 'short' }) : 'Date unavailable';
+        return `<article class="private-message-item">
+          <strong>${escapeDashboardHtml(message.sender || 'Admin')}</strong>
+          <small>${escapeDashboardHtml(sentAt)}</small>
+          <div>${escapeDashboardHtml(message.message || '')}</div>
+        </article>`;
+      }).join('');
+    }
+
+    function renderProfile(profile) {
+      document.getElementById('userName').textContent = profile.full_name || 'Member';
+      document.getElementById('profileName').textContent = profile.full_name || '—';
+      document.getElementById('profileEmail').textContent = profile.email || '—';
+      document.getElementById('accountBalance').textContent = formatNaira(profile.balance_ngn || 0);
+      document.getElementById('pendingDoubling').textContent = formatNaira(profile.pending_doubling_ngn || 0);
+      const pendingItems = profile.pending_doubling || [];
+      const pendingDetail = document.getElementById('pendingDoublingDetail');
+      if (pendingItems.length) {
+        const nextDue = new Date(pendingItems[0].due_at);
+        pendingDetail.textContent = Number.isNaN(nextDue.valueOf())
+          ? 'Accepted deposits are currently growing toward the 4-day target.'
+          : 'Next expected: ' + nextDue.toLocaleString('en-NG', { dateStyle: 'medium', timeStyle: 'short' });
+      } else {
+        pendingDetail.textContent = 'No accepted deposits are waiting for 4-day growth.';
+      }
+
+      const created = profile.created_at
+        ? new Date(profile.created_at).toLocaleDateString('en-NG', { year: 'numeric', month: 'short', day: 'numeric' })
+        : '—';
+      document.getElementById('profileCreated').textContent = created;
+
+      renderActivity(profile.activity || []);
+      renderTransactions(profile.transactions || []);
+      renderPrivateMessages(profile.private_messages || []);
+    }
+
+    async function loadProfile() {
+      const errorEl = document.getElementById('profileError');
+      errorEl.style.display = 'none';
+      try {
+        const res = await fetch('/api/me', { credentials: 'same-origin' });
+        if (!res.ok) {
+          if (res.status === 401) {
+            window.location.href = 'login.html';
+            return;
+          }
+          throw new Error('Could not load your profile.');
+        }
+        const profile = await res.json();
+        renderProfile(profile);
+      } catch (err) {
+        errorEl.textContent = err.message || 'Unable to load account details.';
+        errorEl.className = 'flash-msg flash-error';
+        errorEl.style.display = 'block';
+        document.getElementById('accountActivity').innerHTML =
+          '<tr><td colspan="5">Could not load activity.</td></tr>';
+        document.getElementById('transactionHistory').innerHTML =
+          '<tr><td colspan="5">Could not load transaction history.</td></tr>';
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', loadProfile);
+  </script>
+</body>
+</html>
